@@ -1,1 +1,1 @@
-<iframe src="https://titanembeds.com/embed/367904438318530571" height="600" width="800" frameborder="0"></iframe>
+<iframe src="https://discordapp.com/widget?id=367904438318530571&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
