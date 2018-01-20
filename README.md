@@ -1,1 +1,1 @@
-<iframe src="https://discordapp.com/widget?id=367904438318530571&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+(link)[https://raw.githubusercontent.com/cheesits456/site/master/oie_sxlqX4jvFjZi.png]
