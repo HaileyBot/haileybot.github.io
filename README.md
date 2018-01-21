@@ -1,1 +1,1 @@
-<iframe src="https://kiwiirc.com/client/irc.geekshed.net/?nick=WebClient|?#ghe-network" style="border:0; width:100%; height:450px;"></iframe>
+<iframe src="https://kiwiirc.com/client/irc.geekshed.net/?nick=WebClient|?#the-network" style="border:0; width:100%; height:450px;"></iframe>
