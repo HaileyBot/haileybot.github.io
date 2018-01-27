@@ -25,6 +25,21 @@ body, html {
     padding: 16px;
 }
 </style>
+<style>
+.ui-resizable-helper { border: 1px dotted gray; }
+.resizable{display:block; width:400px; height:400px; padding:30px; border:2px solid gray; overflow:hidden; position:relative;}
+</style>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+$(function() {
+$( ".resizable" ).resizable({
+animate: true, animateEasing: 'swing', animateDuration: 500
+});
+});
+</script>
 </head>
 <body>
 
@@ -123,7 +138,7 @@ sa_font = "1";
 <div class="w3-container w3-dark-grey" style="padding:128px 16px" id="chat">
   <h3 class="w3-center">CHAT</h3>
   <p class="w3-center w3-large">Connect to The Network with IRC</p>
-  <iframe src="https://kiwiirc.com/client/irc.geekshed.net/?nick=WebClient|?#the-network" style="border:0; width:100%; height:500px;"></iframe>
+  <iframe class="resizable" src="https://kiwiirc.com/client/irc.geekshed.net/?nick=WebClient|?#the-network" style="border:0; width:100%; height:500px;"></iframe>
 </div>
 
 <!-- Connect Section -->
