@@ -165,8 +165,11 @@ var invites = ["https://discord.gg/bNv9wzC","https://discord.gg/8R8kP53","https:
 
 servernames = servers.splice().sort();
 
+$(document).ready(function(){
+
 servernames.forEach(function(server) {
  $("#serverlist").append('<div class="w3-container w3-cell w3-mobile" style="margin-top:64px" width="49%"><b><a href="' + invites[servers.indexOf(server)] + '">' + server + '</a></b></div>')
+});
 });
 
 var mySidebar = document.getElementById("mySidebar");
