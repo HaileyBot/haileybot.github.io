@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title>The NETWORK</title>
+<title>HaileyBot</title>
 <meta charset="UTF-8">
-<meta property="og:title" content="The NETWORK">
+<meta property="og:title" content="HaileyBot">
 <meta property="og:url" content="http://cheesits456.github.io/">
 <meta property="og:description" content="Global chat and advertising, with more coming soon!">
 <meta property="og:site_name" content="Join our Discord server at https://discord.gg/7QH4YeD">
@@ -21,11 +21,29 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    opacity:0%;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #333; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 </style>
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll">
   <!-- Avatar image in top left corner -->
   <img src="blue.png" style="width:100%">
   <br><br>
@@ -66,23 +84,23 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">This is</span> The NETWORK</h1>
+    <h1 class="w3-jumbo"><span class="w3-hide-small">This is</span> HaileyBot</h1>
     <div>Global chat and advertising, with more coming soon!</div>
   </header>
-
+  
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">Global Chat</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>**Global Chat writeup**</p>
+    <p>The global chat feature of this bot can link a channel from your Discord server to a multiserver chat - any message sent from the connected channel on your server will send to all the other connected servers, and vice versa. To use the global chat, we <i>do</i> require you to accept the <a href="#eula">EULA</a> on our main Discord server. This is to avoid problems that can potentially get this bot shut down. By breaking the terms of the <a href="#eula">EULA</a>, you are breaking the law, and legal action <i>can</i> be taken against you.</p>
 	<h2 class="w3-text-light-grey">Advertising</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>**Advertising writeup**</p>
+    <p>The advertising feature of this bot allows each user to create their own personal advertisement that they can bump once each hour. An advertisement can be for anything; this feature isn't just for advertising servers. Advertise your YouTube channel, your website, whatever you want! Any <i>valid</i> ad is allowed, as long as it complies with the <a href="#rules">rules</a>. Coming soon, server owners will be able to create a separate ad for their server that can be bumped by any member of the server, the same way many other ad bots work.</p>
 	<br><br>
 	<h2 class="w3-text-light-grey">Stats</h2>
     <hr style="width:200px" class="w3-opacity">
     
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey">
       <div class="w3-quarter w3-section">
         <span class="w3-xlarge">50+</span><br>
         Servers
@@ -115,7 +133,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			<h2 class="w3-text-light-grey">Network Hub</h2>
 			<hr style="width:200px" class="w3-opacity">
 		</center>
-		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for voting on new features, accepting the EULA, viewing in-depth bot stats, and some technical back-end things.</p>
+		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for voting on new features, accepting the EULA, and viewing bot stats and ad bumps.</p>
 		<p style="margin-left:10px"><a href="https://discord.gg/7QH4YeD" class="w3-btn w3-grey w3-round">Join now!</a></p>
 	  </div>
     <!-- End Grid/Pricing tables -->
@@ -131,13 +149,83 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
   <div class="w3-padding-64 w3-content w3-text-grey" id="support">
+  <div class="w3-container w3-cell w3-mobile">
     <h2 class="w3-text-light-grey">Support Us</h2>
     <hr style="width:200px" class="w3-opacity">
 	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-grey w3-round">Adf.ly</a><br>
 	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">Patreon</a><br>
 	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">PayPal</a><br>
-  <!-- End Contact Section -->
   </div>
+  <div class="w3-container w3-cell">
+  <div class="w3-cell-row">
+  <div class="w3-container w3-cell w3-half" id="rules">
+    <h2 class="w3-text-light-grey">Rules</h2>
+    <hr style="width:200px" class="w3-opacity">
+	<div style="height:250px;overflow-y:scroll;padding-right:10px">
+	<p><b>General rules for using the global chat - failure to comply will result in messages from your account being blocked.</b></p>
+    <hr style="width:100%" class="w3-opacity">
+	<p><b>[1]</b> No NSFW content - this includes porn/nudity and gore, text and images.</p>
+	<p><b>[2]</b> No excessive spam</p>
+	<p><b>[3]</b> No unrelated botspam - bot commands are fine but if they're interrupting a conversation needlessly then stop. If there's no convos currently happening then use whatever bot commands you want, as long as they comply with the other rules.</p>
+	<p><b>[4]</b> No hate speech - if you're a racist, homophobic, bigoted, or extremist, go somewhere else</p>
+	<p><b>[5]</b> No disrespect - if you're bothering someone, be respectful and stop what you're doing. Just be respectful in general :)</p>
+	<p><b>[6]</b> This is an English chat - keep it English</p>
+	<p><b>[7]</b> No bypassing the chat filter - doing so will result in an immediate ban, no warnings</p>
+	</div>
+  </div>
+  <div class="w3-container w3-cell w3-half" id="eula">
+    <h2 class="w3-text-light-grey">EULA</h2>
+    <hr style="width:200px" class="w3-opacity">
+	<div style="height:250px;overflow-y:scroll;padding-right:10px">
+	<p><b>EULA for using the global chat - it is mandatory to accept this before using the chat. Accept on our main server (<a href="#invite">Network Hub</a>).</b></p>
+    <hr style="width:100%" class="w3-opacity">
+	<h5 class="w3-text-light-grey">License</h5>
+	<p>Under this End User Licence Agreement (the "Agreement"), cheesits456#6494 (the "Vendor") grants to the user (the "Licensee") a non-exclusive and non-transferable licence (the "Licence") to use HaileyBot (the "Software").</p>
+	<p>"Software" includes the executable computer programs and any related printed, electronic and online documentation and any other files that may accompany the product.</p>
+	<p>Title, copyright, intellectual property rights and distribution rights of the Software remain exclusively with the Vendor. Intellectual property rights include the look and feel of the Software. This Agreement constitutes a licence for use only and is not in any way a transfer of ownership rights to the Software.</p>
+	<p>The rights and obligations of this Agreement are personal rights granted to the Licensee only. The Licensee may not transfer or assign any of the rights or obligations granted under this Agreement to any other person or legal entity. The Licensee may not make available the Software for use by one or more third parties.</p>
+	<p>The Software may not be modified, reverse-engineered, or de-compiled in any manner through current or future available technologies.</p>
+	<p>Failure to comply with any of the terms under the Licence section will be considered a material breach of this Agreement.</p>
+	<h5 class="w3-text-light-grey">Limitation of Liability</h5>
+	<p>The Vendor holds no responsibility for messages sent through the Software by the Licensee, whether originating from a global message, a direct message, or a command.</p>
+	<p>The Vendor does not warrant that use of the Software will be uninterrupted or error-free. The Licensee accepts that software in general is prone to bugs and flaws within an acceptable level as determined in the industry.</p>
+	<h5 class="w3-text-light-grey">Warrants and Representations</h5>
+	<p>The Vendor warrants and represents that it is the copyright holder of the Software. The Vendor warrants and represents that granting the licence to use this Software is not in violation of any other agreement, copyright or applicable statute.</p>
+	<h5 class="w3-text-light-grey">Acceptance</h5>
+	<p>All terms, conditions and obligations of this Agreement will be deemed to be accepted by the Licensee ("Acceptance") on registration of the Software with the Vendor.</p>
+	<h5 class="w3-text-light-grey">Term</h5>
+	<p>The term of this Agreement will begin on Acceptance and is perpetual.</p>
+	<h5 class="w3-text-light-grey">Termination</h5>
+	<p>This Agreement will be terminated and the Licence forfeited where the Licensee has failed to comply with any of the terms of this Agreement or is in breach of this Agreement. On termination of this Agreement for any reason, the Licensee will be blocked from using this software.</p>
+	<h5 class="w3-text-light-grey">Force Majeure</h5>
+	<p>The Vendor will be free of liability to the Licensee where the Vendor is prevented from executing its obligations under this Agreement in whole or in part due to Force Majeure, such as earthquake, typhoon, flood, fire, and war or any other unforeseen and uncontrollable event where the Vendor has taken any and all appropriate action to mitigate such an event.</p>
+	<h5 class="w3-text-light-grey">Additional Clauses</h5>
+	<p>By accepting this Agreement, the Licensee agrees to both the Discord ToS and the Discord Developer ToS, and understands that a breach of either is also a breach of this Agreement.</p>
+	<h5 class="w3-text-light-grey">Governing Law</h5>
+	<p>The Parties to this Agreement submit to the jurisdiction of the courts of the Province of British Columbia for the enforcement of this Agreement or any arbitration award or decision arising from this Agreement. This Agreement will be enforced or construed according to the laws of the Province of British Columbia.</p>
+	<h5 class="w3-text-light-grey">Miscellaneous</h5>
+	<p>This Agreement does not create or imply any relationship in agency or partnership between the Vendor and the Licensee.</p>
+	<p>Headings are inserted for the convenience of the parties only and are not to be considered when interpreting this Agreement. Words in the singular mean and include the plural and vice versa. Words in the masculine gender include the feminine gender and vice versa. Words in the neutral gender include the masculine gender and the feminine gender and vice versa.</p>
+	<p>If any term, covenant, condition or provision of this Agreement is held by a court of competent jurisdiction to be invalid, void or unenforceable, it is the parties' intent that such provision be reduced in scope by the court only to the extent deemed necessary by that court to render the provision reasonable and enforceable and the remainder of the provisions of this Agreement will in no way be affected, impaired or invalidated as a result.</p>
+	<p>This Agreement contains the entire agreement between the parties. All understandings have been included in this Agreement. Representations which may have been made by any party to this Agreement may in some way be inconsistent with this final written Agreement. All such statements are declared to be of no value in this Agreement. Only the written terms of this Agreement will bind the parties.</p>
+	<p>This Agreement and the terms and conditions contained in this Agreement apply to and are binding upon the Vendor's successors and assigns.</p>
+	<h5 class="w3-text-light-grey">Notices</h5>
+	<p>All notices to the Vendor under this Agreement are to be provided to the following Discord account via direct message: cheesits456#6494 (306018440639152128)</p>
+	</div>
+  </div>
+  </div>
+  </div>
+	<!-- End Contact Section -->
+  </div>
+  
+  <footer>
+  <div class="w3-container w3-cell w3-mobile w3-center">
+  <p><img src="dmca.png"></p>
+  </div>
+  <div class="w3-container w3-cell w3-cell-middle">
+  <p><i>The source code of HaileyBot, http://cheesits456.github.io/, and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.</i></p>
+  </div>
+  </footer>
 
 <!-- END PAGE CONTENT -->
 </div>
