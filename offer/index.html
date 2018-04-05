@@ -5,3 +5,14 @@
 <h1 style="background-color:white;width:525px;margin-top:50px;font-family:sans-serif;" onclick="alert('Welp now you\'re dead')">Click here to claim a free death :D</h1>
 </center>
 </body>
+<script>
+colors = ["red","orange","yellow","green","blue","purple"];
+color = 0;
+setInterval(function() {
+ document.body.style.backgroundColor = colors[color];
+ color++
+ if (color > 5) {
+  color = 0;
+ }
+}, 10);
+</script>
