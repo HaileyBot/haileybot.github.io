@@ -3,5 +3,17 @@
 	<title>oof</title>
 </head>
 <body>
-	<p>404</p>
+	<h1>404</h1>
+	<p>HECK THIS ISNT SUPPOSED TO HAPPEN</p>
 </body>
+<script>
+colors = ["red","orange","yellow","green","blue","purple"];
+color = 0;
+setInterval(function() {
+ document.body.style.backgroundColor = colors[color];
+ color++
+ if (color > colors.length-1) {
+  color = 0;
+ }
+}, 10);
+</script>
