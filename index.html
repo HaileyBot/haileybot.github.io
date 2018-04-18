@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="favicon.ico" type="image/ico">
+
+
+
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -39,7 +42,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+.bot-tooltip {
+	padding: 5px;
+	color: black;
+	font-weight: bold;
+	background-color: grey;
+	border: 0px solid black;
+	border-radius: 5px;
+	text-align: right;
+}
+
+.bot-tooltip:hover {
+	cursor: default;
+}
 </style>
+
+
+
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -151,9 +171,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			<p>All dollar values are in Canadian (CAD)</p>
 			<br>
 
+			<div class="w3-half">
+			<div class="w3-half">
+
 			<div class="w3-container w3-cell">
-			<h5 class="w3-text-white">Custom Rank - $5</h5>
+			<h5 class="w3-text-white w3-cell" style="padding-right: 1em">Custom Rank - $5</h5><a title="This allows you to have your own custom rank on global chat with a name and image of your choice" class="bot-tooltip w3-cell">?</a>
 			<div style="height:1px;width:100px;background-color:grey"></div>
+			<br>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="PGFLEX2PUDTXC">
@@ -166,9 +190,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			</form>
 			</div>
 
+			</div>
+			<div class="w3-half">
+
 			<div class="w3-container w3-cell">
-			<h5 class="w3-text-white">Premium Ad - $10</h5>
+			<h5 class="w3-text-white w3-cell" style="padding-right: 1em">Premium Ad - $10</h5><a title="This allows you to have your own short ad that appears in the global chat when people are talking" class="bot-tooltip w3-cell">?</a>
 			<div style="height:1px;width:100px;background-color:grey"></div>
+			<br>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="BGSULHM4855XA">
@@ -181,7 +209,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			</form>
 			</div>
 
+			</div>
+			</div>
+
 		</div>
+
+		<div class="w3-container w3-padding-64"></div>
 
 
   <div class="w3-padding-64 w3-content w3-text-grey" id="support">
