@@ -56,6 +56,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .bot-tooltip:hover {
 	cursor: default;
 }
+	
+.bot-button {
+	background-color: #7289da;
+}
 </style>
 
 
@@ -63,7 +67,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll" style="background-color: #141414">
   <!-- Avatar image in top left corner -->
   <img src="blue.png" style="width:100%">
   <br><br>
@@ -101,15 +105,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 <!-- Page Content -->
-<div class="w3-padding-large" id="main">
+<div class="w3-padding-large" id="main" style="background-color: #202020">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">This is</span> HaileyBot</h1>
     <div>Global chat, advertising, and images!</div>
   </header>
   
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">Global Chat</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>The global chat feature of this bot can link a channel from your Discord server to a multiserver chat - any message sent from the connected channel on your server will send to all the other connected servers, and vice versa. To use the global chat, we <i>do</i> require you to accept the <a href="#eula">EULA</a> on our main Discord server. This is to avoid problems that can potentially get this bot shut down. By breaking the terms of the <a href="#eula">EULA</a>, you are breaking the law, and legal action <i>can</i> be taken against you. To set up a global chat link on your server, you need to send a request to @cheesits456#6494 via direct message on Discord.</p>
@@ -142,7 +146,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 	
-	  <div class="w3-section w3-justify w3-text-grey w3-padding-64" id="invite">
+	  <div class="w3-section w3-justify w3-text-white w3-padding-64" id="invite">
 	<h2 class="w3-text-light-grey">Server</h2>
     <hr style="width:200px" class="w3-opacity">
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -157,15 +161,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			<hr style="width:200px" class="w3-opacity">
 		</center>
 		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for voting on new features, accepting the EULA, and viewing bot stats and ad bumps.</p>
-		<center><div><a href="https://discord.gg/7QH4YeD" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Join Server</a></div>
+		<center><div><a href="https://discord.gg/7QH4YeD" target="_blank" class="w3-btn w3-round bot-button" width="50%">Join Server</a></div>
 			<br>
-		<div><a href="https://bit.ly/haileybot" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Add Bot</a></div></center>
+		<div><a href="https://bit.ly/haileybot" target="_blank" class="w3-btn w3-round bot-button" width="50%">Add Bot</a></div></center>
 	  </div>
     <!-- End Grid/Pricing tables -->
     </div>
 	</div>
 	  
-		<div class="w3-section w3-justify w3-text-grey w3-padding-64" id="shop">
+		<div class="w3-section w3-justify w3-text-white w3-padding-64" id="shop">
 			<h2 class="w3-text-light-grey">Bot Shop</h2>
 			<hr style="width:200px" class="w3-opacity">
 			<p>All dollar values are in Canadian (CAD)</p>
@@ -226,13 +230,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 		<div class="w3-container w3-padding-64"></div>
 
 
-  <div class="w3-padding-64 w3-content w3-text-grey" id="support">
+  <div class="w3-padding-64 w3-content w3-text-white" id="support">
   <div class="w3-container w3-cell w3-mobile">
     <h2 class="w3-text-light-grey">Support Us</h2>
     <hr style="width:200px" class="w3-opacity">
-	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-grey w3-round">Adf.ly</a><br>
-	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">Patreon</a><br>
-	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">PayPal</a><br>
+	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-round bot-button">Adf.ly</a><br>
+	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-round bot-button">Patreon</a><br>
+	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-round bot-button">PayPal</a><br>
   </div>
   <div class="w3-container w3-cell">
   <div class="w3-cell-row">
