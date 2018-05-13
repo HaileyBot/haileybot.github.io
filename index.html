@@ -12,9 +12,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="favicon.ico" type="image/ico">
-
-
-
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -42,32 +39,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-
-.bot-tooltip {
-	padding: 5px;
-	color: black;
-	font-weight: bold;
-	background-color: grey;
-	border: 0px solid black;
-	border-radius: 5px;
-	text-align: right;
-}
-
-.bot-tooltip:hover {
-	cursor: default;
-}
-	
-.bot-button {
-	background-color: #7289da;
-}
 </style>
-
-
-
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll" style="background-color: #141414">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll">
   <!-- Avatar image in top left corner -->
   <img src="blue.png" style="width:100%">
   <br><br>
@@ -85,8 +61,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </a>
   <a href="#shop" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-shopping-cart w3-xxlarge"></i>
-    <p>SHOP</p>
+    <p>MERCH</p>
   </a>
+  <a href="#store" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+	  <i class="fa fa-paypal w3-xxlarge"></i>
+	  <p>SHOP</p>
+	</a>
   <a href="#support" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-dollar w3-xxlarge"></i>
     <p>SUPPORT</p>
@@ -96,57 +76,60 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
-    <a href="#invite" class="w3-bar-item w3-button" style="width:20% !important">INVITE</a>
-    <a href="#shop" class="w3-bar-item w3-button" style="width:20% !important">SHOP</a>
-    <a href="#support" class="w3-bar-item w3-button" style="width:20% !important">SUPPORT</a>
+    <a href="#" class="w3-bar-item w3-button" style="width:16.66% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:16.66% !important">ABOUT</a>
+    <a href="#invite" class="w3-bar-item w3-button" style="width:16.66% !important">INVITE</a>
+    <a href="#shop" class="w3-bar-item w3-button" style="width:16.66% !important">MERCH</a>
+    <a href="#store" class="w3-bar-item w3-button" style="width:16.66% !important">SHOP</a>
+    <a href="#support" class="w3-bar-item w3-button" style="width:16.66% !important">SUPPORT</a>
   </div>
 </div>
 
 <!-- Page Content -->
-<div class="w3-padding-large" id="main" style="background-color: #202020">
+<div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center" id="home">
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">This is</span> HaileyBot</h1>
     <div>Global chat, advertising, and images!</div>
+    <br>
+    <a href="https://discordbots.org/bot/423637161632464906" ><img src="https://discordbots.org/api/widget/status/423637161632464906.svg?noavatar=true" alt="Status" /></a><br><a href="https://discordbots.org/bot/423637161632464906" ><img src="https://discordbots.org/api/widget/upvotes/423637161632464906.svg?noavatar=true" alt="Upvotes" /></a>
   </header>
   
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
     <h2 class="w3-text-light-grey">Global Chat</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>The global chat feature of this bot can link a channel from your Discord server to a multiserver chat - any message sent from the connected channel on your server will send to all the other connected servers, and vice versa. To use the global chat, we <i>do</i> require you to accept the <a href="#eula">EULA</a> on our main Discord server. This is to avoid problems that can potentially get this bot shut down. By breaking the terms of the <a href="#eula">EULA</a>, you are breaking the law, and legal action <i>can</i> be taken against you. To set up a global chat link on your server, you need to send a request to @cheesits456#6494 via direct message on Discord.</p>
 	<h2 class="w3-text-light-grey">Advertising</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>The advertising feature of this bot allows each user to create their own personal advertisement that they can bump once each hour. An advertisement can be for anything; this feature isn't just for advertising servers. Advertise your YouTube channel, your website, whatever you want! Any <i>valid</i> ad is allowed, as long as it complies with the <a href="#rules">rules</a>. Also, server owners can create a separate ad for their server that can be bumped by any member of the server, the same way many other ad bots work.</p>
+    <p>The advertising feature of this bot allows each user to create their own personal advertisement that they can bump once each hour. An advertisement can be for anything; this feature isn't just for advertising servers. Advertise your YouTube channel, your website, whatever you want! Any <i>valid</i> ad is allowed, as long as it complies with the <a href="#rules">rules</a>. Coming soon, server owners will be able to create a separate ad for their server that can be bumped by any member of the server, the same way many other ad bots work.</p>
     <h2 class="w3-text-light-grey">Images</h2>
     <hr style="width:200px" class="w3-opacity">
-    <p>The image feature of this bot lets you send fun images from the bot. Images are limited to 200 pixels in height so they don't take up too much space and aren't too spammy.</p>
+    <p>The image feature of this bot lets you send fun images from the bot. Images are limited to 200x200 pixels so they don't take up too much space and aren't too spammy.</p>
 	<br><br>
 	<h2 class="w3-text-light-grey">Stats</h2>
     <hr style="width:200px" class="w3-opacity">
     
     <div class="w3-row w3-center w3-padding-16 w3-section w3-grey">
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">85+</span><br>
+        <span class="w3-xlarge">75+</span><br>
         Servers
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">62,200+</span><br>
+        <span class="w3-xlarge">61,200+</span><br>
         Members
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">270+</span><br>
+        <span class="w3-xlarge">710+</span><br>
         Global Chat Users
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">230+</span><br>
+        <span class="w3-xlarge">175+</span><br>
         Registered Ads
       </div>
     </div>
 	
-	  <div class="w3-section w3-justify w3-text-white w3-padding-64" id="invite">
+	  <div class="w3-section w3-justify w3-text-grey w3-padding-64" id="invite">
 	<h2 class="w3-text-light-grey">Server</h2>
     <hr style="width:200px" class="w3-opacity">
     <div class="w3-row-padding" style="margin:0 -16px">
@@ -160,83 +143,48 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			<h2 class="w3-text-light-grey">HaileyBot Hub</h2>
 			<hr style="width:200px" class="w3-opacity">
 		</center>
-		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for accepting the EULA, viewing bot statistics and ad bumps, and communicating with the Developer and the team of testers.</p>
-		<center><div><a href="https://discord.gg/7QH4YeD" target="_blank" class="w3-btn w3-round bot-button" width="50%">Join Server</a></div>
+		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for voting on new features, accepting the EULA, and viewing bot stats and ad bumps.</p>
+		<center><div><a href="https://discord.gg/7QH4YeD" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Join Server</a></div>
 			<br>
-		<div><a href="https://bit.ly/haileybot" target="_blank" class="w3-btn w3-round bot-button" width="50%">Add Bot</a></div></center>
+		<div><a href="https://bit.ly/haileybot" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Add Bot</a></div></center>
 	  </div>
     <!-- End Grid/Pricing tables -->
     </div>
 	</div>
+	
+  <div class="w3-section w3-justify w3-text-grey" id="shop">
+    <h2 class="w3-text-light-grey">Merch Shop</h2>
+    <hr style="width:200px" class="w3-opacity">
+	<p>Click <a href="https://shop.spreadshirt.com/haileybot-merch-shop/" target="_blank">here</a> for fullscreen</p>
+    <iframe width="100%" height="500" src="https://shop.spreadshirt.com/haileybot-merch-shop/"></iframe>
+  <!-- End Portfolio Section -->
+  </div>
 	  
-		<div class="w3-section w3-justify w3-text-white w3-padding-64" id="shop">
-			<h2 class="w3-text-light-grey">Bot Shop</h2>
-			<hr style="width:200px" class="w3-opacity">
-			<p>All dollar values are in Canadian (CAD)</p>
-			<br>
+	  <div class="w3-section w3-justify w3-text-grey w3-padding-64" id="store">
+		  <h2 class="w3-text-light-grey">Bot Shop</h2>
+		  <hr style="width:200px" class="w3-opacity">
+		  <p class="w3-text-white">Custom Rank</p>
+		  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="3CT4GCNATWHM2">
+<table>
+<tr><td><input type="hidden" name="on0" value="Rank Name">Rank Name</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+<tr><td><input type="hidden" name="on1" value="Image URL">Image URL</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+</table>
+			  <br>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 
-			<center><div class="w3-third w3-container w3-cell">
-			<h5 class="w3-text-white w3-cell" style="padding-right: 1em">Custom Rank - $5</h5><a title="This allows you to have your own custom rank on global chat with a name and image of your choice" class="bot-tooltip w3-cell">?</a>
-			<div style="height:1px;width:100px;background-color:grey"></div>
-			<br>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="PGFLEX2PUDTXC">
-				<table>
-					<tr><td><input type="hidden" name="on0" value="Username and discriminator"><span style="font-size: 0.9em">Username and discriminator</span></td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-				</table>
-				<br>
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			</div></center>
+	  </div>
 
-			<center><div class="w3-third w3-container w3-cell">
-			<h5 class="w3-text-white w3-cell" style="padding-right: 1em">Premium Ad - $10</h5><a title="This allows you to have your own short ad that appears in the global chat when people are talking" class="bot-tooltip w3-cell">?</a>
-			<div style="height:1px;width:100px;background-color:grey"></div>
-			<br>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="BGSULHM4855XA">
-				<table>
-					<tr><td><input type="hidden" name="on0" value="Username and discriminator"><span style="font-size: 0.9em">Username and discriminator</span></td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-				</table>
-				<br>
-				<center><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></center>
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			</div></center>
-
-
-			<center><div class="w3-third w3-container w3-cell">
-			<h5 class="w3-text-white w3-cell" style="padding-right: 1em">Premium Filter - $5</h5><a title="This allows you to have an unlimited amount of terms in your server's global filter" class="bot-tooltip w3-cell">?</a>
-			<div style="height:1px;width:100px;background-color:grey"></div>
-			<br>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="6PVWMA4LBT5YS">
-				<table>
-					<tr><td><input type="hidden" name="on0" value="Username and discriminator"><span style="font-size: 0.9em">Username and discriminator</span></td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-				</table>
-				<br>
-				<center><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></center>
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			</div></center>
-
-
-		</div>
-
-		<div class="w3-container w3-padding-64"></div>
-
-
-  <div class="w3-padding-64 w3-content w3-text-white" id="support">
+  <div class="w3-padding-64 w3-content w3-text-grey" id="support">
   <div class="w3-container w3-cell w3-mobile">
     <h2 class="w3-text-light-grey">Support Us</h2>
     <hr style="width:200px" class="w3-opacity">
-	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-round bot-button">Adf.ly</a><br>
-	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-round bot-button">Patreon</a><br>
-	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-round bot-button">PayPal</a><br>
+	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-grey w3-round">Adf.ly</a><br>
+	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">Patreon</a><br>
+	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">PayPal</a><br>
   </div>
   <div class="w3-container w3-cell">
   <div class="w3-cell-row">
