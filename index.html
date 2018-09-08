@@ -1,262 +1,875 @@
-<!DOCTYPE html>
-<html>
-<title>HaileyBot</title>
-<meta charset="UTF-8">
-<meta property="og:title" content="HaileyBot">
-<meta property="og:url" content="http://haileybot.github.io/">
-<meta property="og:description" content="Global chat, advertising, and images!">
-<meta property="og:site_name" content="Join our Discord server at https://discord.gg/7QH4YeD">
-<meta property="og:type" content="object">
-<meta property="og:image" content="https://cdn.discordapp.com/avatars/373371306818666496/97d4a0872f8b7844c38819f104686e06.png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="icon" href="favicon.ico" type="image/ico">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-::-webkit-scrollbar {
-    width: 10px;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="The most versatile multipurpose bot you'll find">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="HaileyBot">
+    <meta property="og:url" content="http://haileybot.github.io/">
+    <meta property="og:description" content="The most versatile multipurpose bot you'll find">
+    <meta property="og:site_name" content="Invite the bot at bit.ly/haileybot">
+    <meta property="og:type" content="object">
+    <meta property="og:image" content="https://cdn.discordapp.com/avatars/373371306818666496/97d4a0872f8b7844c38819f104686e06.png">
+    <title>HaileyBot</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/haileybot.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HaileyBot">
+    <link rel="apple-touch-icon-precomposed" href="images/haileybot.png">
+    <meta name="msapplication-TileImage" content="images/haileybot.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <link rel="shortcut icon" href="images/haileybot.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    .codeblock {
+      border: 2px solid #ddd;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 5px;
+      font-family: "Lucida Console", Monaco, monospace;
+      color: #5555ff;
+      font-size: 0.8em;
+    }
+    .code {
+      border: 1px solid #ddd;
+      background-color: #f5f5f5;
+      padding: 2px;
+      font-family: "Lucida Console", Monaco, monospace;
+      color: #ff5555;
+      font-size: 0.8em;
+    }
+    .color-red {
+      color: #ff5555;
+    }
+    .color-grey {
+      color: #616161;
+    }
+    .color-black {
+      color: black;
+    }
+    .color-green {
+      color: #009900;
+    }
+    </style>
+    <script type="text/javascript">
+      function featureTopic(topic) {
+        switch (topic) {
+          case ("features"):
+            document.getElementById("featureText").innerHTML = "<h4>Features</h4>HaileyBot aims to be an incredibly versatile bot, with every feature you can think of, as well as some you would never even imagine. Of course, getting to that point takes time, and we're still on our way. With every new update comes a new feature, bringing us closer to our goal of becoming one of the 'greats', alongside Tatsumaki, Mee6, and Dyno.";
+            break;
+          case ("global"):
+             document.getElementById("featureText").innerHTML = "<h4>Global</h4>The global chat feature of this bot can link a channel from your server to the bot's global chat. Any messages sent to a connected channel are forwarded through the bot to all the other connected channels. This allows you to talk with people from other servers in real time, similar to yggdrasil, except this is a permanent link to an entire community of servers, not just a temporary link to a single person.";
+            break;
+          case ("ads"):
+            document.getElementById("featureText").innerHTML = "<h4>Advertising</h4>The advertising feature of this bot allows server admins to create an advertisement for their server, and bump it every 2 hours. Ad bumps are sent to the designated channel on the bot's home server and can be seen by nearly 500 members.";
+            break;
+          case ("moderation"):
+            document.getElementById("featureText").innerHTML = "<h4>Moderation</h4>This bot contains all the standard moderation command (kick, ban, warn, etc) as well as some that other bots don't have, such as autorole, welcome and goodbye messages, filter, and more.";
+            break;
+          case ("misc"):
+            document.getElementById("featureText").innerHTML = "<h4>Miscellaneous</h4>This bot also has many commands that don't quite fit any of the categories, such as getting detailed information about a user or a server, recalling an old message by using its ID, setting up a profile for yourself, and creating a poll for server members to vote on.";
+            break;
+        }
+      }
+    </script>
+    <script src="material.min.js"></script>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" style="text-align: justify;">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <img src="images/haileybot.png" height="200%">
+          <h3>&nbsp;HaileyBot</h3>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
+          <a href="#docs" class="mdl-layout__tab">Documentation</a>
+          <a href="#invite" class="mdl-layout__tab">Invite / Server</a>
+          <a href="#chat" class="mdl-layout__tab" target="_blank" onclick="window.open('https://titanembeds.com/embed/433705917591322635?theme=DiscordDark')">Global Chat</a>
+          <a href="#shop" class="mdl-layout__tab">Shop</a>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white" style="background-color: #2C2F33">
+                <a href="https://discordbots.org/bot/423637161632464906" target="_blank">
+                  <img width="100%" height="auto" src="https://discordbots.org/api/widget/423637161632464906.svg" alt="HaileyBot" />
+                </a>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text" id="featureText">
+                <h4>Features</h4>
+                HaileyBot aims to be an incredibly versatile bot, with every feature you can think of, as well as some you would never even imagine. Of course, getting to that point takes time, and we're still on our way. With every new update comes a new feature, bringing us closer to our goal of becoming one of the 'greats', alongside Tatsumaki, Mee6, and Dyno.
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
+              <i class="material-icons">keyboard_arrow_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+              <li class="mdl-menu__item" onclick="featureTopic('features')">Features</li>
+              <li class="mdl-menu__item" onclick="featureTopic('global')">Global</li>
+              <li class="mdl-menu__item" onclick="featureTopic('ads')">Advertising</li>
+              <li class="mdl-menu__item" onclick="featureTopic('moderation')">Moderation</li>
+              <li class="mdl-menu__item" onclick="featureTopic('misc')">Miscellaneous</li>
+            </ul>
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Statistics</h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  395+
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Registered Ads</h5>
+                  The total number of ads that have been registered via the bot's advertising function
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  360+
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Global Bans</h5>
+                  The total number of people who have been put on our global ban list for violating our global ban policy
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  89,000+
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Total Members</h5>
+                  The total number of members across all the servers the bot is in
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  225+
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Servers</h5>
+                  The total number of servers the bot is currently in
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Open-Source Libraries</h4>
+                <p>This bot makes use of some free, open-source node.js libraries, listed below:</p>
+                <h5>Discord.js</h5>
+                Used as a secondary API wrapper, deals with things that the main wrapper can't handle due to depracation.
+                <br><br>
+                <a href="https://nodei.co/npm/discord.js" target="_blank"><img src="https://nodei.co/npm/discord.js.png"></a>
+                <h5>Discordie</h5>
+                Used as the main API wrapper, and although its 2 years out-of-date, it still does <i>most</i> of what I need it to.
+                <br><br>
+                <a href="https://nodei.co/npm/discordie" target="_blank"><img src="https://nodei.co/npm/discordie.png"></a>
+                <h5>File-System</h5>
+                Used to read and write from configuration and database files.
+                <br><br>
+                <a href="https://nodei.co/npm/file-system" target="_blank"><img src="https://nodei.co/npm/file-system.png"></a>
+                <h5>Snekfetch</h5>
+                Used to create custom API endpoints and post things to the API that the other wrappers don't handle.
+                <br><br>
+                <a href="https://nodei.co/npm/snekfetch" target="_blank"><img src="https://nodei.co/npm/snekfetch.png"></a>
+              </div>
+            </div>
+          </section>
+          <br><br>
+        </div>
+        <div class="mdl-layout__tab-panel" id="docs" style="background-color: #f5f5f5">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Documentation</h4>
+                This section provides Documentation of the bot's commands and examples of correct usage.<br><br>
+                <p><span style="font-weight: bold;">Notes:</span><br>
+                <span class="code">&lt;</span> and <span class="code">&gt;</span> are used to represent <i>mandatory</i> command input, <span class="code">[</span> and <span class="code">]</span> are for optional input. Do not include the brackets when typing the command.
+                <ul class="toc">
+                  <a href="#docs-ads">Advertising<br><span style="font-size: 0.7em; color: #616161">ad, bump, register</span></a>
+                  <a href="#docs-bot">Bot-related commands<br><span style="font-size: 0.7em; color: #616161">donate, error, help, info, invite, ping, stats, suggest, tip, vote</span></a>
+                  <a href="#docs-global">Global<br><span style="font-size: 0.7em; color: #616161">addserver, appeal, delserver, ranks, report, rules</span></a>
+                  <a href="#docs-images">Images<br><span style="font-size: 0.7em; color: #616161">banne, blorp, dab, dafuq, delet, doge, facepalm, gay, grr, heck, jebus, knuckles, ohno, oof, oops, panic, sadde, thonk, umm, wat, wink, yay</span></a>
+                  <a href="#docs-misc">Miscellaneous<br><span style="font-size: 0.7em; color: #616161">avatar, balance, poll, profile, quote, server, user</span></a>
+                  <a href="#docs-mod">Moderation<br><span style="font-size: 0.7em; color: #616161">autorole, ban, disable, enable, filter, goodbye, kick, prune, warn, welcome</span></a>
+                  <a href="#docs-music">Music<br><span style="font-size: 0.7em; color: #616161">clearqueue, leave, pause, play, queue, resume, skip, volume</span></a>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-/* Track */
-::-webkit-scrollbar-track {
-    opacity:0%;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #333; 
-}
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-ads">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Advertising</h4>
+                Commands related to the advertising functionality of the bot
+                <hr>
+                <h5>$-ad</h5>
+                Usage: <span class="code">$-ad</span><br><br>
+                <p>Get a preview of your server's ad sent to your DMs.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  NO_ADVERT<br>
+                  This command only works if your server has a registered ad
+                </div>
+                <br><hr>
+                <h5>$-bump</h5>
+                Usage: <span class="code">$-bump</span><br><br>
+                <p>Bump your server's ad to the designated bump channel on the bot's main server.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  LATEST_BUMP<br>
+                  Your server's ad is already the most recently bumped ad<br><br>
+                  NO_ADVERT<br>
+                  This command only works if your server has a registered ad
+                </div>
+                <br><hr>
+                <h5>$-register</h5>
+                Usage: <span class="code">$-register &lt;ad&gt;</span><br><br>
+                <p>Register an ad for your server.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_AD<br>
+                  The length of an ad cannot exceed 1500 characters<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by server admins<br><br>
+                  NO_INVITE<br>
+                  Server ads must include a discord.gg invite link
+                </div>
+                <br>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-</style>
-<body class="w3-black">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-bot">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Bot-related Commands</h4>
+                Commands related directly to the bot
+                <hr>
+                <h5>$-donate</h5>
+                Usage: <span class="code">$-donate</span><br><br>
+                <p>Get a link to our PayPal so you can donate to us.</p>
+                <hr>
+                <h5>$-error</h5>
+                Usage: <span class="code">$-error &lt;report&gt;</span><br><br>
+                <p>Send a bug report to the bot creator so it can be fixed.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  MISSING_ARGS<br>
+                  The command must include an actual error report
+                </div>
+                <br><hr>
+                <h5>$-help</h5>
+                Usage: <span class="code">$-help [command]</span><br><br>
+                <p>Get a list of commands, or get help for a specific command.</p>
+                <hr>
+                <h5>$-info</h5>
+                Usage: <div class="codeblock color-red">$-info<br>$-info ads<br>$-info global<br>$-info images</div><br>
+                <p>Get information about some of the things the bot does</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_INPUT<br>
+                  Info topic must be one of the phrases listed in this command's usage
+                </div>
+                <br><hr>
+                <h5>$-invite</h5>
+                Usage: <span class="code">$-invite</span><br><br>
+                <p>Get an invite link to the bot, the bot's server, the bot's website, and our partner bot.</p>
+                <hr>
+                <h5>$-ping</h5>
+                Usage: <span class="code">$-ping</span><br><br>
+                <p>Check the network connection speed of the bot, and how many computations per second its currently processing (TPS).</p>
+                <hr>
+                <h5>$-stats</h5>
+                Usage: <span class="code">$-stats</span><br><br>
+                <p>View some of the bot's statistics, such as how many users it currently has, how many servers it's in, and more.</p>
+                <hr>
+                <h5>$-suggest</h5>
+                Usage: <span class="code">$-suggest &lt;suggestion&gt;</span><br><br>
+                <p>Send a suggestion for the bot to the creator. If your suggestion is accepted, you'll be granted one point.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  MISSING_ARGS<br>
+                  The command must include an actual suggestion
+                </div>
+                <br><hr>
+                <h5>$-tip</h5>
+                Usage: <span class="code">$-tip</span><br><br>
+                <p>Recieve a random tip regarding bot usage.</p>
+                <hr>
+                <h5>$-vote</h5>
+                Usage: <span class="code">$-vote</span><br><br>
+                <p>Get a link to the bot's upvote page on Discord Bot List.</p>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="noscroll">
-  <!-- Avatar image in top left corner -->
-  <img src="blue.png" style="width:100%">
-  <br><br>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-terminal w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#invite" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-plus w3-xxlarge"></i>
-    <p>INVITE</p>
-  </a>
-  <a href="#shop" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-shopping-cart w3-xxlarge"></i>
-    <p>MERCH</p>
-  </a>
-  <a href="#store" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-	  <i class="fa fa-paypal w3-xxlarge"></i>
-	  <p>SHOP</p>
-	</a>
-  <a href="#support" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-dollar w3-xxlarge"></i>
-    <p>SUPPORT</p>
-  </a>
-</nav>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-global">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Global</h4>
+                Commands related to the bot's global chat functionality
+                <hr>
+                <h5>$-addserver</h5>
+                Usage: <span class="code">$-addserver</span><br><br>
+                <p>The channel you type this command into will be linked to the bot's global chat.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  GLOBAL_OVERFLOW<br>
+                  Global chat can only have 50 connected servers. Your server will be added to a queue and linked up once a slot is available<br><br>
+                  GUILD_CONNECTED<br>
+                  Your server can only have one channel linked to global chat<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin
+                </div>
+                <br><hr>
+                <h5>$-appeal</h5>
+                Usage: <span class="code">$-appeal &lt;message&gt;</span><br><br>
+                <p>Send an appeal to the bot creator if you've been banned according to our global ban policy.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  MISSING_PERMS<br>
+                  This command can only be executed by members on our global ban list
+                </div>
+                <br><hr>
+                <h5>$-delserver</h5>
+                Usage: <span class="code">$-delserver</span><br><br>
+                <p>This will unlink your server from global chat. An alternative is to delete your server's global channel.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  NO_LINK<br>
+                  This command only works if your server is linked to global chat
+                </div>
+                <br><hr>
+                <h5>$-ranks</h5>
+                Usage: <span class="code">$-ranks</span><br><br>
+                <p>View a list of the available global ranks.</p>
+                <hr>
+                <h5>$-report</h5>
+                Usage: <span class="code">$-report &lt;user&gt; &lt;action&gt;</span><br><br>
+                <p>Report a user for violating our global ban policy.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  MISSING_ARGS<br>
+                  Must include a user to report as well as a reason for the report
+                </div>
+                <br><hr>
+                <h5>$-rules</h5>
+                Usage: <span class="code">$-rules</span><br><br>
+                <p>View the rules that you must follow in the global chat.</p>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:16.66% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:16.66% !important">ABOUT</a>
-    <a href="#invite" class="w3-bar-item w3-button" style="width:16.66% !important">INVITE</a>
-    <a href="#shop" class="w3-bar-item w3-button" style="width:16.66% !important">MERCH</a>
-    <a href="#store" class="w3-bar-item w3-button" style="width:16.66% !important">SHOP</a>
-    <a href="#support" class="w3-bar-item w3-button" style="width:16.66% !important">SUPPORT</a>
-  </div>
-</div>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-images">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Images</h4>
+                These commands are for sending 'reaction' images
+                <hr>
+                <h5>$-banne</h5>
+                <img src="images/banne.jpg"><br>
+                <br><hr>
+                <h5>$-blorp</h5>
+                <img src="images/blorp.jpg"><br>
+                <br><hr>
+                <h5>$-dab</h5>
+                <img src="images/dab.jpg"><br>
+                <br><hr>
+                <h5>$-dafuq</h5>
+                <img src="images/dafuq.jpg"><br>
+                <br><hr>
+                <h5>$-delet</h5>
+                <img src="images/delet.png"><br>
+                <br><hr>
+                <h5>$-doge</h5>
+                <img src="images/doge.jpg"><br>
+                <br><hr>
+                <h5>$-facepalm</h5>
+                <img src="images/facepalm.jpg"><br>
+                <br><hr>
+                <h5>$-gay</h5>
+                <img src="images/gay.png"><br>
+                <br><hr>
+                <h5>$-grr</h5>
+                <img src="images/grr.jpg"><br>
+                <br><hr>
+                <h5>$-heck</h5>
+                <img src="images/heck.png"><br>
+                <br><hr>
+                <h5>$-jebus</h5>
+                <img src="images/jebus.jpg"><br>
+                <br><hr>
+                <h5>$-knuckles</h5>
+                <img src="images/knuckles.png"><br>
+                <br><hr>
+                <h5>$-ohno</h5>
+                <img src="images/ohno.png"><br>
+                <br><hr>
+                <h5>$-oof</h5>
+                <img src="images/oof.jpg"><br>
+                <br><hr>
+                <h5>$-oops</h5>
+                <img src="images/oops.png"><br>
+                <br><hr>
+                <h5>$-panic</h5>
+                <img src="images/panic.png"><br>
+                <br><hr>
+                <h5>$-sadde</h5>
+                <img src="images/sadde.jpg"><br>
+                <br><hr>
+                <h5>$-thonk</h5>
+                <img src="images/thonk.jpg"><br>
+                <br><hr>
+                <h5>$-umm</h5>
+                <img src="images/umm.png"><br>
+                <br><hr>
+                <h5>$-wat</h5>
+                <img src="images/wat.jpg"><br>
+                <br><hr>
+                <h5>$-wink</h5>
+                <img src="images/wink.jpg"><br>
+                <br><hr>
+                <h5>$-yay</h5>
+                <img src="images/yay.jpg"><br>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">This is</span> HaileyBot</h1>
-    <div>Global chat, advertising, and images!</div>
-  </header>
-  
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Global Chat</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>The global chat feature of this bot can link a channel from your Discord server to a multiserver chat - any message sent from the connected channel on your server will send to all the other connected servers, and vice versa. To use the global chat, we <i>do</i> require you to accept the <a href="#eula">EULA</a> on our main Discord server. This is to avoid problems that can potentially get this bot shut down. By breaking the terms of the <a href="#eula">EULA</a>, you are breaking the law, and legal action <i>can</i> be taken against you. To set up a global chat link on your server, you need to send a request to @cheesits456#6494 via direct message on Discord.</p>
-	<h2 class="w3-text-light-grey">Advertising</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>The advertising feature of this bot allows each user to create their own personal advertisement that they can bump once each hour. An advertisement can be for anything; this feature isn't just for advertising servers. Advertise your YouTube channel, your website, whatever you want! Any <i>valid</i> ad is allowed, as long as it complies with the <a href="#rules">rules</a>. Coming soon, server owners will be able to create a separate ad for their server that can be bumped by any member of the server, the same way many other ad bots work.</p>
-    <h2 class="w3-text-light-grey">Images</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>The image feature of this bot lets you send fun images from the bot. Images are limited to 200x200 pixels so they don't take up too much space and aren't too spammy.</p>
-	<br><br>
-	<h2 class="w3-text-light-grey">Stats</h2>
-    <hr style="width:200px" class="w3-opacity">
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">75+</span><br>
-        Servers
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">61,200+</span><br>
-        Members
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">710+</span><br>
-        Global Chat Users
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">175+</span><br>
-        Registered Ads
-      </div>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-misc">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Miscellaneous</h4>
+                Various commands that don't quite fit any other category
+                <hr>
+                <h5>$-avatar</h5>
+                Usage: <span class="code">$-avatar [mention]</span><br><br>
+                <p>View your profile pic, or include a user mention to view their profile pic.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_USER<br>
+                  If you provide an input to this command, it must be a valid user
+                </div>
+                <br><hr>
+                <h5>$-balance</h5>
+                Usage: <span class="code">$-balance</span><br><br>
+                <p>View your current points balance (earn points with <span class="code color-grey">$-suggest</span>).</p>
+                <hr>
+                <h5>$-poll</h5>
+                Usage: <span class="code">$-poll &lt;question&gt; &lt;options&gt;</span><br><br>
+                <p>Post a poll with a question and up to 5 answers for people to vote on. Use a question mark and a space ( <span class="code color-grey">? </span>&nbsp;) to separate the question from the answers, and use a comma and a space ( <span class="code color-grey">, </span>&nbsp;) to separate the answers from each other.</p>
+                Example: <span class="code color-green">$-poll Who is the best? me, you, someone else, that one, that other person</span><br><br>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_INPUT<br>
+                  Input data must follow the format stated above<br><br>
+                  MISSING_ARGS<br>
+                  Command must include a question and 2 to 5 possible options to vote on
+                </div>
+                <br><hr>
+                <h5>$-profile</h5>
+                Usage: <div class="codeblock color-red">
+                  $-profile [mention]<br>
+                  $-profile set bio &lt;type your bio here&gt;<br>
+                  $-profile set birthday &lt;month.day.year&gt;<br>
+                  $-profile set gender &lt;your gender&gt;<br>
+                  $-profile set height &lt;feet.inches&gt;<br>
+                  $-profile set name &lt;your name &gt;
+                </div><br>
+                <p>Set up your own profile or view another user's profile. Leave <span class="code color-grey">[mention]</span> field blank to view your own profile.</p>
+                Examples: <div class="codeblock color-green">
+                  $-profile set bio I'm a cool person :thumbsup:<br>
+                  $-profile set birthday 7.27.2000<br>
+                  $-profile set gender Female<br>
+                  $-profile set height 6.0<br>
+                  $-profile set name cheesits456
+                </div><br>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_INPUT<br>
+                  You'll get this error if you try to set a value that doesn't exist, for example <span class="code color-grey">$-profile set weight</span>, or if you try to get the profile of a user that doesn't exist<br><br>
+                  INVALID_SETTING<br>
+                  You haven't used the correct formatting when setting a value; the error message will contain the information you need<br><br>
+                  MISSING_ARGS<br>
+                  You'll get this error if you try to execute <span class="code color-grey">$-profile set</span> without providing any other input<br><br>
+                  NaN<br>
+                  Some settings require numbers as input - if you don't provide numbers, you'll get the NaN error (Not a Number)
+                </div>
+                <br><hr>
+                <h5>$-quote</h5>
+                Usage: <div class="codeblock color-red">$-quote &lt;message ID&gt;<br>$-quote &lt;message ID&gt; [channel ID]<br>$-quote &lt;message ID&gt; [guild ID]</div><br>
+                <p>Recall a message based on its ID. If the message is in a different channel from the one you execute the command in, you must provide either the ID of the guild its in, or the ID of the channel.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_QUOTE<br>
+                  You'll receive this error if the quoted message is above 256 characters, if its an NSFW channel's quote being quoted into a non-NSFW channel, or if the specified message ID can't be found<br><br>
+                  MISSING_ARGS<br>
+                  You must provide at least a message ID for this command to work
+                </div>
+                <br><hr>
+                <h5>$-server</h5>
+                Usage: <span class="code">$-server</span><br><br>
+                <p>View information about the server this command is executed in. Info includes server age, channel count, global chat channel, ID, member count, server name, and owner username/discriminator.</p>
+                <hr>
+                <h5>$-user</h5>
+                Usage: <span class="code">$-user [user info]</span><br><br>
+                <p>Get detailed information about a user account. The command input <span class="code color-grey">[user info]</span> can be a username, discriminator, ID, or <span class="code color-grey">@</span> mention. Leave the input blank to view your own user information.</p>
+                Examples: <div class="codeblock color-green">
+                  $-user 6494<br>
+                  $-user cheesits456<br>
+                  $-user 306018440639152128<br>
+                  $-user @cheesits456#6494
+                </div><br>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_USER<br>
+                  You'll receive this error if the command input doesn't match any known user account
+                </div>
+                <br>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
+
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-mod">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text"> 
+                <h4>Moderation</h4>
+                Commands to assist you in staffing your server
+                <hr>
+                <h5>$-autorole</h5>
+                Usage: <div class="codeblock color-red">$-autorole<br>$-autorole &lt;role mention&gt;<br>$-autorole disable</div><br>
+                <p>Set up or disable autorole, or view the current autorole status on your server.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_ROLE<br>
+                  Autorole can only be set to a valid role on your server<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin
+                </div>
+                <br><hr>
+                <h5>$-ban</h5>
+                Usage: <span class="code">$-ban &lt;mention&gt; [reason]</span><br><br>
+                <p>Ban the mentioned user from your server. If <span class="code color-grey">[reason]</span> is provided, it'll appear in your server's audit log.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_ARGS<br>
+                  Must include a user to ban<br><br>
+                  MISSING_PERMS<br>
+                  Both the bot and the user executing this command must have the <span class="code color-grey">Ban Members</span> permission
+                </div>
+                <br><hr>
+                <h5>$-disable</h5>
+                Usage: <span class="code">$-disable</span><br><br>
+                <p>Disable the bot in the channel you type this command in. This will prevent the bot from responding to any command in that channel, aside from <span class="code color-grey">$-enable</span>. This will not prevent the bot from using the filter function in that channel. To prevent that, deny the bot's permission to delete messages in that channel.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild
+                </div>
+                <br><hr>
+                <h5>$-enable</h5>
+                Usage: <span class="code">$-enable</span><br><br>
+                <p>Re-enable the bot's ability to respond to commands in a channel that you've previously used <span class="code color-grey">$-disable</span> in.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild
+                </div>
+                <br><hr>
+                <h5>$-filter</h5>
+                Usage: <div class="codeblock color-red">$-filter add &lt;word&gt;<br>$-filter remove &lt;word&gt;<br>$-filter clear<br>$-filter list</div><br>
+                <p>Set up your server's filter, view the list of filtered words, or clear your filter.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  FILTER_OVERFLOW<br>
+                  Filter can only have up to 10 terms in it<br><br>
+                  INVALID_FILTER<br>
+                  Your filter must include a word that you are trying to remove from it<br><br>
+                  INVALID_INPUT<br>
+                  Command input keywords must match the documentation above<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_ARGS<br>
+                  Must include all mandatory command input<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  NO_FILTER<br>
+                  You can't execute certain filter functions if your server doesn't have a filter
+                </div>
+                <br><hr>
+                <h5>$-goodbye</h5>
+                Usage: <div class="codeblock color-red">
+                  $-goodbye channel &lt;channel mention&gt;<br>
+                  $-goodbye message &lt;message&gt;<br>
+                  $-goodbye disable<br><br>
+                  Variables:<br>
+                  {count} &nbsp; &nbsp;Server's new user count<br>
+                  {discrim} &nbsp;Leaving user's discriminator<br>
+                  {mention} &nbsp;Mention the leaving user<br>
+                  {server} &nbsp; Server's name<br>
+                  {username} Leaving user's username
+                </div><br>
+                <p>Set up goodbye messages for when members leave your server</p>
+                Examples: <div class="codeblock color-green">
+                  $-goodbye channel #member-log<br>
+                  $-goodbye message Goodbye, {username}#{discrim}. The server now has {count} members.
+                </div><br>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_CHANNEL<br>
+                  The specified channel has to be a channel that exists on your server<br><br>
+                  INVALID_INPUT<br>
+                  Command input must match the formatting listed in the above documentation<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild
+                </div>
+                <br><hr>
+                <h5>$-kick</h5>
+                Usage: <span class="code">$-kick &lt;mention&gt; [reason]</span><br><br>
+                <p>Kick the mentioned user from your server. If <span class="code color-grey">[reason]</span> is provided, it'll appear in your server's audit log.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_ARGS<br>
+                  Must include a user to kick<br><br>
+                  MISSING_PERMS<br>
+                  Both the bot and the user executing this command must have the <span class="code color-grey">Kick Members</span> permission
+                </div>
+                <br><hr>
+                <h5>$-prune</h5>
+                Usage: <div class="codeblock color-red">$-prune &lt;number&gt;<br>$-prune &lt;number&gt; bot<br>$-prune &lt;number&gt; user<br>$-prune &lt;number&gt; [mention]</div><br>
+                <p>Bulk delete messages from a channel. If no input is provided aside from <span class="code color-grey">&lt;number&gt;</span>, it'll simply delete the previous <span class="code color-grey">&lt;number&gt;</span> messages. If <span class="code color-grey">user</span> is included, it will be limited to deleting user messages. If <span class="code color-grey">bot</span> is included, it will be limited to deleting bot messages. If a user mention is provided, it will only delete messages from the specified user.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  FILTER_OVERFLOW<br>
+                  Filter can only have up to 10 terms in it<br><br>
+                  INVALID_FILTER<br>
+                  Your filter must include a word that you are trying to remove from it<br><br>
+                  INVALID_INPUT<br>
+                  Command input keywords must match the documentation above<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_ARGS<br>
+                  Must include all mandatory command input<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  NO_FILTER<br>
+                  You can't execute certain filter functions if your server doesn't have a filter
+                </div>
+                <br><hr>
+                <h5>$-warn</h5>
+                Usage: <div class="codeblock color-red">$-warn &lt;user&gt; &lt;reason&gt;<br>$-warn channel &lt;channel mention&gt;<br>$-warn global &lt;true|false&gt;</div><br>
+                <p>After setting the warn channel, you can use this command to warn users for breaking your server's rules. Executing this command will cause the bot to DM the mentioned user, as well as post a warning in the set warning channel for your staff to see. If you enable global warnings, then every time a member joins your server, it checks if they've been put on our watchlist for violating our global ban policy. If they have, the bot posts a warning in your server's warning channel, and you or your staff team can take whatever action you feel is necessary.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_ARGS<br>
+                  <span class="code color-grey">$-warn global</span> must be set to either <span class="code color-grey">true</span> or <span class="code color-grey">false</span><br><br>
+                  INVALID_CHANNEL<br>
+                  Warning channel must be set to a channel that exists within your guild<br><br>
+                  INVALID_INPUT<br>
+                  Command input must match the documentation above<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild<br><br>
+                  MISSING_ARGS<br>
+                  Must include all mandatory command input<br><br>
+                  MISSING_PERMS<br>
+                  Warning channel can only be set by a server admin, and users can only be warned by members with the <span class="code color-grey">KICK_MEMBERS</span> permission<br><br>
+                </div>
+                <br><hr>
+                <h5>$-welcome</h5>
+                Usage: <div class="codeblock color-red">
+                  $-welcome channel &lt;channel mention&gt;<br>
+                  $-welcome message &lt;message&gt;<br>
+                  $-welcome disable<br><br>
+                  Variables:<br>
+                  {count} &nbsp; &nbsp;Server's new user count<br>
+                  {discrim} &nbsp;New user's discriminator<br>
+                  {mention} &nbsp;Mention the new user<br>
+                  {server} &nbsp; Server's name<br>
+                  {username} New user's username
+                </div><br>
+                <p>Set up welcome messages for when members join your server</p>
+                Examples: <div class="codeblock color-green">
+                  $-welcome channel #member-log<br>
+                  $-welcome message Welcome to **{server}**, {mention}! You're member #{count}.
+                </div><br>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_CHANNEL<br>
+                  The specified channel has to be a channel that exists on your server<br><br>
+                  INVALID_INPUT<br>
+                  Command input must match the formatting listed in the above documentation<br><br>
+                  INVALID_SCOPE<br>
+                  This command can only be executed in a guild
+                </div>
+                <br>
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
+
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="docs-music">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Music</h4>
+                Due to latency issues, the Music feature will most likely be removed from this bot, and as such, no documentation will be provided. For a more enjoyable music experience, try our partner bot.
+              </div>
+            </div>
+            <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
+              Return to top<i class="material-icons">keyboard_arrow_up</i>
+            </a>
+          </section>
+          <br><br>
+        </div>
+        <div class="mdl-layout__tab-panel" id="invite" style="background-color: #f5f5f5">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white" style="background-color: #fff">
+              <img width="90%" height="auto" src="images/server.png" alt="HaileyBot Hub">
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text" id="featureText">
+                <h4>HaileyBot Hub</h4>
+                This server is the central hub of HaileyBot, used for accepting the EULA, viewing bot statistics and ad bumps, voting on new features, and communicating with the Developer and the team of testers.<br><br>
+                <a href="http://bit.ly/haileybot" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Bot</a>&nbsp;
+                <a href="http://discord.gg/7QH4YeD" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Server</a>
+              </div>
+            </div>
+          </section>
+          <br><br>
+        </div>
+        <div class="mdl-layout__tab-panel" id="chat" style="background-color: #f5f5f5">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Global Chat Preview</h4>
+                Chatting from the website is currently disabled. Plans are in place to integrate it in the future. For now, the window that opened is a read-only link to the bot's global chat.
+              </div>
+            </div>
+          </section>
+          <br><br>
+        </div>
+        <div class="mdl-layout__tab-panel" id="shop" style="background-color: #f5f5f5">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Shop</h4>
+                All dollar values are in CAD. After making a purchase, send a DM on Discord to @cheesits456#6494 and provide your transaction ID.
+                <br><br>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="VRXBGNZETQEA4">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Custom Rank - $5</h5>
+                  Customize the image that appears in front of your name when you speak in global chat
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="56ZN6RAXKB46W">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Premium Filter - $5</h5>
+                  Have an unlimited number of words in your server's filter
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="YV7QYHJKUQMNL">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5 style="font-size:1.25em">Premium Ad - $10</h5>
+                  Make your own short ad that appears in the global chat when people are talking
+                </div>
+              </div>
+            </div>
+          </section>
+          <br><br>
+        </div>
+        <footer class="mdl-mega-footer">
+          <div class="mdl-mega-footer--middle-section">
+            <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+              <h1 class="mdl-mega-footer--heading">Contact Us</h1>
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="mailto:haileybot@hotmail.com">Email</a></li>
+                <li><a href="http://www.instagram.com/hailey.bot" target="_blank">Instagram</a></li>
+                <li><a href="http://discord.gg/7QH4YeD" target="_blank">Discord</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mdl-mega-footer--bottom-section">
+            <div class="mdl-logo">
+              © Copyright 2017 - 2018 cheesits456#6494
+            </div>
+          </div>
+        </footer>
+      </main>
     </div>
-	
-	  <div class="w3-section w3-justify w3-text-grey w3-padding-64" id="invite">
-	<h2 class="w3-text-light-grey">Server</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <iframe src="https://titanembeds.com/embed/433705917591322635?theme=DiscordDark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
-      </div>
-
-      <div class="w3-half">
-        <center>
-			<img src="purple.png" width="200" height="200">
-			<h2 class="w3-text-light-grey">HaileyBot Hub</h2>
-			<hr style="width:200px" class="w3-opacity">
-		</center>
-		<p style="padding:10px;padding-bottom:0">This server is the central hub of HaileyBot, used for voting on new features, accepting the EULA, and viewing bot stats and ad bumps.</p>
-		<center><div><a href="https://discord.gg/7QH4YeD" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Join Server</a></div>
-			<br>
-		<div><a href="https://bit.ly/haileybot" target="_blank" class="w3-btn w3-grey w3-round" width="50%">Add Bot</a></div></center>
-	  </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
-	</div>
-	
-  <div class="w3-section w3-justify w3-text-grey" id="shop">
-    <h2 class="w3-text-light-grey">Merch Shop</h2>
-    <hr style="width:200px" class="w3-opacity">
-	<p>Click <a href="https://shop.spreadshirt.com/haileybot-merch-shop/" target="_blank">here</a> for fullscreen</p>
-    <iframe width="100%" height="500" src="https://shop.spreadshirt.com/haileybot-merch-shop/"></iframe>
-  <!-- End Portfolio Section -->
-  </div>
-	  
-	  <div class="w3-section w3-justify w3-text-grey w3-padding-64" id="store">
-		  <h2 class="w3-text-light-grey">Bot Shop</h2>
-		  <hr style="width:200px" class="w3-opacity">
-		  <p class="w3-text-white">Custom Rank</p>
-		  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="3CT4GCNATWHM2">
-<table>
-<tr><td><input type="hidden" name="on0" value="Rank Name">Rank Name</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-<tr><td><input type="hidden" name="on1" value="Image URL">Image URL</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
-</table>
-			  <br>
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-	  </div>
-
-  <div class="w3-padding-64 w3-content w3-text-grey" id="support">
-  <div class="w3-container w3-cell w3-mobile">
-    <h2 class="w3-text-light-grey">Support Us</h2>
-    <hr style="width:200px" class="w3-opacity">
-	<img src="adfly.png" height="75" width="75" style="padding:10px"><a href="http://q.gs/E3mQg" target="_blank" class="w3-btn w3-grey w3-round">Adf.ly</a><br>
-	<img src="patreon.png" height="75" width="75" style="padding:10px"><a href="http://www.patreon.com/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">Patreon</a><br>
-	<img src="paypal.png" height="75" width="75" style="padding:10px"><a href="http://www.paypal.me/cheesits456" target="_blank" class="w3-btn w3-grey w3-round">PayPal</a><br>
-  </div>
-  <div class="w3-container w3-cell">
-  <div class="w3-cell-row">
-  <div class="w3-container w3-cell w3-half" id="rules">
-    <h2 class="w3-text-light-grey">Rules</h2>
-    <hr style="width:200px" class="w3-opacity">
-	<div style="height:250px;overflow-y:scroll;padding-right:10px">
-	<p><b>General rules for using the global chat - failure to comply will result in messages from your account being blocked.</b></p>
-    <hr style="width:100%" class="w3-opacity">
-	<p><b>[1]</b> No NSFW content - this includes porn/nudity and gore, text and images.</p>
-	<p><b>[2]</b> No excessive spam</p>
-	<p><b>[3]</b> No unrelated botspam - bot commands are fine but if they're interrupting a conversation needlessly then stop. If there's no convos currently happening then use whatever bot commands you want, as long as they comply with the other rules.</p>
-	<p><b>[4]</b> No hate speech - if you're a racist, homophobic, bigoted, or extremist, go somewhere else</p>
-	<p><b>[5]</b> No disrespect - if you're bothering someone, be respectful and stop what you're doing. Just be respectful in general :)</p>
-	<p><b>[6]</b> This is an English chat - keep it English</p>
-	<p><b>[7]</b> No bypassing the chat filter - doing so will result in an immediate ban, no warnings</p>
-	</div>
-  </div>
-  <div class="w3-container w3-cell w3-half" id="eula">
-    <h2 class="w3-text-light-grey">EULA</h2>
-    <hr style="width:200px" class="w3-opacity">
-	<div style="height:250px;overflow-y:scroll;padding-right:10px">
-	<p><b>EULA for using the global chat - it is mandatory to accept this before using the chat. Accept on our main server (<a href="#invite">Network Hub</a>).</b></p>
-    <hr style="width:100%" class="w3-opacity">
-	<h5 class="w3-text-light-grey">License</h5>
-	<p>Under this End User Licence Agreement (the "Agreement"), cheesits456#6494 (the "Vendor") grants to the user (the "Licensee") a non-exclusive and non-transferable licence (the "Licence") to use HaileyBot (the "Software").</p>
-	<p>"Software" includes the executable computer programs and any related printed, electronic and online documentation and any other files that may accompany the product.</p>
-	<p>Title, copyright, intellectual property rights and distribution rights of the Software remain exclusively with the Vendor. Intellectual property rights include the look and feel of the Software. This Agreement constitutes a licence for use only and is not in any way a transfer of ownership rights to the Software.</p>
-	<p>The rights and obligations of this Agreement are personal rights granted to the Licensee only. The Licensee may not transfer or assign any of the rights or obligations granted under this Agreement to any other person or legal entity. The Licensee may not make available the Software for use by one or more third parties.</p>
-	<p>The Software may not be modified, reverse-engineered, or de-compiled in any manner through current or future available technologies.</p>
-	<p>Failure to comply with any of the terms under the Licence section will be considered a material breach of this Agreement.</p>
-	<h5 class="w3-text-light-grey">Limitation of Liability</h5>
-	<p>The Vendor holds no responsibility for messages sent through the Software by the Licensee, whether originating from a global message, a direct message, or a command.</p>
-	<p>The Vendor does not warrant that use of the Software will be uninterrupted or error-free. The Licensee accepts that software in general is prone to bugs and flaws within an acceptable level as determined in the industry.</p>
-	<h5 class="w3-text-light-grey">Warrants and Representations</h5>
-	<p>The Vendor warrants and represents that it is the copyright holder of the Software. The Vendor warrants and represents that granting the licence to use this Software is not in violation of any other agreement, copyright or applicable statute.</p>
-	<h5 class="w3-text-light-grey">Acceptance</h5>
-	<p>All terms, conditions and obligations of this Agreement will be deemed to be accepted by the Licensee ("Acceptance") on registration of the Software with the Vendor.</p>
-	<h5 class="w3-text-light-grey">Term</h5>
-	<p>The term of this Agreement will begin on Acceptance and is perpetual.</p>
-	<h5 class="w3-text-light-grey">Termination</h5>
-	<p>This Agreement will be terminated and the Licence forfeited where the Licensee has failed to comply with any of the terms of this Agreement or is in breach of this Agreement. On termination of this Agreement for any reason, the Licensee will be blocked from using this software.</p>
-	<h5 class="w3-text-light-grey">Force Majeure</h5>
-	<p>The Vendor will be free of liability to the Licensee where the Vendor is prevented from executing its obligations under this Agreement in whole or in part due to Force Majeure, such as earthquake, typhoon, flood, fire, and war or any other unforeseen and uncontrollable event where the Vendor has taken any and all appropriate action to mitigate such an event.</p>
-	<h5 class="w3-text-light-grey">Additional Clauses</h5>
-	<p>By accepting this Agreement, the Licensee agrees to both the Discord ToS and the Discord Developer ToS, and understands that a breach of either is also a breach of this Agreement.</p>
-	<h5 class="w3-text-light-grey">Governing Law</h5>
-	<p>The Parties to this Agreement submit to the jurisdiction of the courts of the Province of British Columbia for the enforcement of this Agreement or any arbitration award or decision arising from this Agreement. This Agreement will be enforced or construed according to the laws of the Province of British Columbia.</p>
-	<h5 class="w3-text-light-grey">Miscellaneous</h5>
-	<p>This Agreement does not create or imply any relationship in agency or partnership between the Vendor and the Licensee.</p>
-	<p>Headings are inserted for the convenience of the parties only and are not to be considered when interpreting this Agreement. Words in the singular mean and include the plural and vice versa. Words in the masculine gender include the feminine gender and vice versa. Words in the neutral gender include the masculine gender and the feminine gender and vice versa.</p>
-	<p>If any term, covenant, condition or provision of this Agreement is held by a court of competent jurisdiction to be invalid, void or unenforceable, it is the parties' intent that such provision be reduced in scope by the court only to the extent deemed necessary by that court to render the provision reasonable and enforceable and the remainder of the provisions of this Agreement will in no way be affected, impaired or invalidated as a result.</p>
-	<p>This Agreement contains the entire agreement between the parties. All understandings have been included in this Agreement. Representations which may have been made by any party to this Agreement may in some way be inconsistent with this final written Agreement. All such statements are declared to be of no value in this Agreement. Only the written terms of this Agreement will bind the parties.</p>
-	<p>This Agreement and the terms and conditions contained in this Agreement apply to and are binding upon the Vendor's successors and assigns.</p>
-	<h5 class="w3-text-light-grey">Notices</h5>
-	<p>All notices to the Vendor under this Agreement are to be provided to the following Discord account via direct message: cheesits456#6494 (306018440639152128)</p>
-	</div>
-  </div>
-  </div>
-  </div>
-	<!-- End Contact Section -->
-  </div>
-  
-  <footer>
-  <div class="w3-container w3-cell w3-mobile w3-center">
-  <p><img src="dmca.png"></p>
-  </div>
-  <div class="w3-container w3-cell w3-cell-middle">
-  <p><i>The source code of HaileyBot, http://cheesits456.github.io/, and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.</i></p>
-  </div>
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
-</body>
+  </body>
 </html>
