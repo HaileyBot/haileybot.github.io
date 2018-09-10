@@ -72,7 +72,7 @@
             document.getElementById("featureText").innerHTML = "<h4>Features</h4>HaileyBot aims to be an incredibly versatile bot, with every feature you can think of, as well as some you would never even imagine. Of course, getting to that point takes time, and we're still on our way. With every new update comes a new feature, bringing us closer to our goal of becoming one of the 'greats', alongside Tatsumaki, Mee6, and Dyno.";
             break;
           case ("global"):
-             document.getElementById("featureText").innerHTML = "<h4>Global</h4>The global chat feature of this bot can link a channel from your server to the bot's global chat. Any messages sent to a connected channel are forwarded through the bot to all the other connected channels. This allows you to talk with people from other servers in real time, similar to yggdrasil, except this is a permanent link to an entire community of servers, not just a temporary link to a single person.";
+             document.getElementById("featureText").innerHTML = "<h4>Global</h4>The global chat feature of this bot can link a channel from your server to the bot's global chat. Any messages sent to a connected channel are forwarded through the bot to all the other connected channels. This allows you to talk with people from other servers in real time, similar to yggdrasil, except this is a permanent link to an entire community of servers, not just a temporary link to a single person. We also now have an NSFW global chat, separate from the main chat.";
             break;
           case ("ads"):
             document.getElementById("featureText").innerHTML = "<h4>Advertising</h4>The advertising feature of this bot allows server admins to create an advertisement for their server, and bump it every 2 hours. Ad bumps are sent to the designated channel on the bot's home server and can be seen by nearly 500 members.";
@@ -144,21 +144,21 @@
                   The total number of ads that have been registered via the bot's advertising function
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
-                  360+
+                  385+
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5 style="font-size:1.25em">Global Bans</h5>
                   The total number of people who have been put on our global ban list for violating our global ban policy
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
-                  89,000+
+                  90,000+
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5 style="font-size:1.25em">Total Members</h5>
                   The total number of members across all the servers the bot is in
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="font-weight: bold; font-size: 1.5em; padding-top: 2%">
-                  225+
+                  235+
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5 style="font-size:1.25em">Servers</h5>
@@ -204,7 +204,7 @@
                 <ul class="toc">
                   <a href="#docs-ads">Advertising<br><span style="font-size: 0.7em; color: #616161">ad, bump, register</span></a>
                   <a href="#docs-bot">Bot-related commands<br><span style="font-size: 0.7em; color: #616161">donate, error, help, info, invite, ping, stats, suggest, tip, vote</span></a>
-                  <a href="#docs-global">Global<br><span style="font-size: 0.7em; color: #616161">addserver, appeal, delserver, ranks, report, rules</span></a>
+                  <a href="#docs-global">Global<br><span style="font-size: 0.7em; color: #616161">appeal, link, ranks, report, rules, unlink</span></a>
                   <a href="#docs-images">Images<br><span style="font-size: 0.7em; color: #616161">banne, blorp, dab, dafuq, delet, doge, facepalm, gay, grr, heck, jebus, knuckles, ohno, oof, oops, panic, sadde, thonk, umm, wat, wink, yay</span></a>
                   <a href="#docs-misc">Miscellaneous<br><span style="font-size: 0.7em; color: #616161">avatar, balance, poll, profile, quote, server, user</span></a>
                   <a href="#docs-mod">Moderation<br><span style="font-size: 0.7em; color: #616161">autorole, ban, disable, enable, filter, goodbye, kick, prune, warn, welcome</span></a>
@@ -339,9 +339,18 @@
                 <h4>Global</h4>
                 Commands related to the bot's global chat functionality
                 <hr>
-                <h5>$-addserver</h5>
-                Usage: <span class="code">$-addserver</span><br><br>
-                <p>The channel you type this command into will be linked to the bot's global chat.</p>
+                <h5>$-appeal</h5>
+                Usage: <span class="code">$-appeal &lt;message&gt;</span><br><br>
+                <p>Send an appeal to the bot creator if you've been banned according to our global ban policy.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  MISSING_PERMS<br>
+                  This command can only be executed by members on our global ban list
+                </div>
+                <br><hr>
+                <h5>$-link</h5>
+                Usage: <span class="code">$-link [nsfw]</span><br><br>
+                <p>The channel you type this command into will be linked to the bot's global chat. If you include <span class="code color-grey">[nsfw]</span>, the channel will be linked to the nsfw global chat instead of the main one.</p>
                 Possible Errors:
                 <div class="codeblock">
                   GLOBAL_OVERFLOW<br>
@@ -352,28 +361,6 @@
                   This command can only be used in a guild<br><br>
                   MISSING_PERMS<br>
                   This command can only be executed by a server admin
-                </div>
-                <br><hr>
-                <h5>$-appeal</h5>
-                Usage: <span class="code">$-appeal &lt;message&gt;</span><br><br>
-                <p>Send an appeal to the bot creator if you've been banned according to our global ban policy.</p>
-                Possible Errors:
-                <div class="codeblock">
-                  MISSING_PERMS<br>
-                  This command can only be executed by members on our global ban list
-                </div>
-                <br><hr>
-                <h5>$-delserver</h5>
-                Usage: <span class="code">$-delserver</span><br><br>
-                <p>This will unlink your server from global chat. An alternative is to delete your server's global channel.</p>
-                Possible Errors:
-                <div class="codeblock">
-                  INVALID_SCOPE<br>
-                  This command can only be used in a guild<br><br>
-                  MISSING_PERMS<br>
-                  This command can only be executed by a server admin<br><br>
-                  NO_LINK<br>
-                  This command only works if your server is linked to global chat
                 </div>
                 <br><hr>
                 <h5>$-ranks</h5>
@@ -392,6 +379,20 @@
                 <h5>$-rules</h5>
                 Usage: <span class="code">$-rules</span><br><br>
                 <p>View the rules that you must follow in the global chat.</p>
+                <hr>
+                <h5>$-unlink</h5>
+                Usage: <span class="code">$-unlink</span><br><br>
+                <p>This will unlink your server from global chat. An alternative is to delete your server's global channel.</p>
+                Possible Errors:
+                <div class="codeblock">
+                  INVALID_SCOPE<br>
+                  This command can only be used in a guild<br><br>
+                  MISSING_PERMS<br>
+                  This command can only be executed by a server admin<br><br>
+                  NO_LINK<br>
+                  This command only works if your server is linked to global chat
+                </div>
+                <br>
               </div>
             </div>
             <a href="#docs" style="width:100%;text-align: right;text-decoration: none;font-size: 1.25em;padding: 1%;border-top:1px solid #ddd">
