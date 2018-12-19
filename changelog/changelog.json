@@ -1,0 +1,392 @@
+{
+
+ "2": {
+  "date": 1535233171786,
+  "features": {
+   "new": [
+    ["Nothing"]
+   ],
+   "upcoming": [
+    ["Completely redesigned website, easier on the eyes, with a modern UI and a new documentation section"]
+   ]
+  }
+ },
+
+ "3": {
+  "date": 1537794795920,
+  "features": {
+   "new": [
+    ["Approximately 8 hours were spent rewriting the bot", ["Complete rewrite of the core: **~3 hours**", "Complete rewrite of every command: **~5 hours**"]],
+    ["HaileyBot now has a username and discriminator when speaking in global chat, same as everybody else"],
+    ["Removed all traces of `Discordie` package due to depracation. Bot will now run much faster and more reliably"]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "4": {
+  "date": 1538204430700,
+  "features": {
+   "new": [
+    ["Redesign of global messages to use embed formatting, even on the server the message originated from", ["Messages from the same user get grouped together if no other users spoke between them", "Embed color reflects the user's highest rank, regardless of any custom ranks", "Milestone announcements are posted in the footer of the embed"]]
+   ],
+   "upcoming": [
+    ["Slight changes to global chat messages"]
+   ]
+  }
+ },
+
+ "5": {
+  "date": 1540656913469,
+  "features": {
+   "new": [
+    ["`$-link` now has a new sub-command called `private`", ["Allows you to create multiple private networks of linked channels", "Private links use webhooks to make them feel natural, as if its actually the _users_ talking, rather than just a bot that's mirroring their messages", "Messages appear in privately linked channels _exactly_ as they appear in the channel they were sent from. The message's content, attachments, and embeds (yes, private links work for bots as well) are all sent straight through with no changes to anything.", "To get started, simply execute the command `$-link private <category>`, replacing `<category>` with the name of the group you'd like to link to. Groups are individualised per user, so there's no crossover conflicts, and any name is valid. If you enter the name of a group that doesn't exist yet, It will automatically be created and added to the database.", "To remove a channel from a private link, simply type `$-unlink` into the channel. Alternatively, if you don't want the channel at all anymore, deleting it will remove it from our database"]]
+   ],
+   "upcoming": [
+    ["Re-design of the command handler: faster, smoother, more reliable, and easier for me to manage"]
+   ]
+  }
+ },
+
+ "2.0.1": {
+  "date": 1535336371856,
+  "features": {
+   "new": [
+    ["Instagram Profile: @hailey.bot (<https://www.instagram.com/hailey.bot>)", "Email Address: haileybot@hotmail.com"]
+   ],
+   "upcoming": [
+    ["Completely redesigned website, easier on the eyes, with a modern UI and a new documentation section"]
+   ]
+  }
+ },
+
+ "2.1": {
+  "date": 1536384637970,
+  "features": {
+   "new": [
+    ["Fully redesigned website has been released, check it out at <http://haileybot.github.io>"]
+   ],
+   "upcoming": [
+    ["NSFW global chat, separate from the normal one"]
+   ]
+  }
+ },
+
+ "2.2": {
+  "date": 1536470718378,
+  "features": {
+   "new": [
+    ["NSFW global chat, separate from the normal one", ["Use `$-addserver nsfw` to connect a server", "Channel must be set as `nsfw` for it to work properly"]],
+    ["Accepting the EULA is no longer required to use the global chat. It is now only required for sending links and/or images, as well as using the NSFW global chat."]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.1": {
+  "date": 1536547293080,
+  "features": {
+   "new": [
+    ["`$-addserver` has been renamed to `$-link`", "`$-delserver` has been renamed to `$-unlink`"],
+    ["Bot's version number is now included in the changelog"]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.2": {
+  "date": 1537349177112,
+  "features": {
+   "new": [
+    ["`#global` has been renamed to `#global-general`"],
+    ["New category `GLOBAL`, containing both current global chats, and possibly future additions (stay tuned)", "New category `RADIO`, to keep the radio channels separate from the `SPEAKABLE` category, since you aren't able to speak in them"]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.3": {
+  "date": 1537361902932,
+  "features": {
+   "new": [
+    ["`#announcements` has been removed due to lack of use caused by the `CHANGELOGS` category"],
+    ["New channel `#frequently-asked` has answers to the most common questions I get about the bot.", "New command `$-faq` brings you directly to `#frequently-asked` so you can get your answers."]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.4": {
+  "date": 1537596921668,
+  "features": {
+   "new": [
+    ["`#info` has been rewritten to provide more accurate and up-to-date information about the bot."]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.5": {
+  "date": 1537607902957,
+  "features": {
+   "new": [
+    ["Changes to `#frequently-asked`:", ["Edited layout", "Added numbers to questions and answers for easy reference", "Reworded a couple questions", "Rewrote a few answers to provide better information"]]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.2.6": {
+  "date": 1537634660827,
+  "features": {
+   "new": [
+    ["New staff rank for the global chat, so that the staff of HaileyBot's server are easier to distinguish from other users."]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "2.3": {
+  "date": 1537766009056,
+  "features": {
+   "new": [
+    ["All music functions have been removed from HaileyBot due to latency problems", "Voice channel `HaileyBot Radio` has been deleted"],
+    ["Complete redesign of the output of `$-user`", "Added avatar and account creation date to `$-user`"],
+    ["Changed the bot host to a faster, more reliable computer"]
+   ],
+   "upcoming": [
+    ["Modlog functions, to keep track of what's happening in your server"]
+   ]
+  }
+ },
+
+ "3.1": {
+  "date": 1537890109036,
+  "features": {
+   "new": [
+    [
+     ["Redesign of command `$-server`"],
+     ["Command `$-help` is now fully functional again (broke a bit after v3.0)"]
+    ]
+   ],
+   "upcoming": [
+    ["More command redesigns to provide a better user experience", "Modlog functions have been delayed due to lack of general interest and higher priorities"]
+   ]
+  }
+ },
+
+ "4.1": {
+  "date": 1538219785481,
+  "features": {
+   "new": [
+    ["Any mentions (channels, roles, and users) in global chat will be replaced with bolded text, so people from other servers don't see `#invalid-channel` and `@deleted-role`"],
+    ["New `$-emote` command for looking up info about an emote and getting a full-sized image of it"]
+   ],
+   "upcoming": [
+    ["Live server stats"]
+   ]
+  }
+ },
+
+ "4.2": {
+  "date": 1538269903227,
+  "features": {
+   "new": [
+    ["New command `$-live` will send a message containing your server's statistics. Whenever any of the statistics change, the message will be updated automatically. You can view an example of this feature in #info. The idea for this command was thanks to a suggestion from `Kitty Powers#3651`"]
+   ],
+   "upcoming": ["Redesign of `$-stats` command", "Redesign of server bumps"]
+  }
+ },
+
+ "4.3": {
+  "date": 1538377121086,
+  "features": {
+   "new": [
+    ["More redesigns!", ["`$-stats` now uses an embed as well, and has a brief write-up for each number", "`$-bump` now sends your ad with more info, in a better-looking format"]],
+    ["`$-user` can now fetch data for _any_ user on Discord if you provide their ID. You're no longer limited to only users the bot shares a server with."]
+   ],
+   "upcoming": [
+    ["The plan for now is to add ModLog functionality, but it depends on whether or not I get any better suggestions by the time I sit down to program again"]
+   ]
+  }
+ },
+
+ "4.3.1": {
+  "date": 1538553288241,
+  "features": {
+   "new": [
+    ["`$-stats` now has a few additional statistics, and no more annoying descriptions"],
+    ["Began work on ModLog functionality - The core infrastructure is nearly complete. After that I need to write a command to tie it all together."],
+    ["Changed the bot invite link from **bit.ly** to **rebrand.ly** and modified the pre-assigned permissions"]
+   ],
+   "upcoming": [
+    ["Fully functional ModLog"]
+   ]
+  }
+ },
+
+ "4.4": {
+  "date": 1538556510907,
+  "features": {
+   "new": [
+    ["ModLog is now fully functional!", ["`$-modlog` to view current status", "`$-modlog <channel mention>` to set logging channel", "`$-modlog disable` to turn off ModLog", "If any output exceeds 2000 characters (ie. log of message edit), rather than trying to send the content in a message (and failing), HaileyBot will save it to a file and upload the file"]]
+   ],
+   "upcoming": [
+    ["It all comes down to suggestions now. If none are provided, I might tinker around a bit and end up with something cool, but any new suggestions will be my top priority"]
+   ]
+  }
+ },
+
+ "4.4.1": {
+  "date": 1538696726928,
+  "features": {
+   "new": [
+    ["ModLog channel has been made public to provide an example of the functionality", "New tutorial channels have been created for global chat, advertising, and ModLog", "EULA channel is now hidden for all users who have accepted it"]
+   ],
+   "upcoming": [
+    ["Nothing currently planned, but boredom may give birth to something interesting. New suggestions (if they're good) will be top priority"]
+   ]
+  }
+ },
+
+ "4.4.2": {
+  "date": 1538747233354,
+  "features": {
+   "new": [
+    ["ModLog now logs embeds when logging message edit and delete events", ["Embed's sidebar color gets changed to red or yellow, depending on the action"]],
+    ["ModLog now has a priority cache for servers that have it enabled", ["Checks if ModLog is enabled in your server, and if it is, index every text channel on the server and cache the 50 most recent messages.", "Allows HaileyBot to see any messages that might've happened when she was offline, so if the messages get edited or deleted, she'll be able to see that"]],
+    ["ModLog now logs channel edit events (somehow I forgot about that)"],
+    ["Any links sent to modlog channels get wrapped with `<` and `>` so they don't embed"]
+   ],
+   "upcoming": [
+    ["Going through the old suggestions that I never coded in because I'm lazy even though they're good ideas. Expect a lot of random updates and features soon. New suggestions are still top priority"]
+   ]
+  }
+ },
+
+ "4.5": {
+  "date": 1538864123124,
+  "features": {
+   "new": [
+    ["New sub-command `$-live channels`", ["Creates a new category at the top of your channel list and makes viewable but unjoinable voice channels", "Posts stats to voice channels by using the channel name", "Stats update automatically"]],
+    ["`#warning-log` is now public and has been moved to the `MODERATION` category to provide an example of how it works", "`#welcome` has been renamed to `#member-log` and has been moved to the `MODERATION` category", "`#modlog-tutorial` has been renamed to `#moderation-tutorial`, and now provides much more information regarding different moderation commands"],
+    ["Role colors have been edited"],
+    ["Documentation has been released in the `DOCUMENTATION` category", ["Channels for each command category, and one for FAQ", "Channels contain detailed information about every command in that category"]]
+   ],
+   "upcoming": [
+    ["Sub-commands for `$-modlog`, so you can choose to only log certain events and/or certain channels"]
+   ]
+  }
+ },
+
+ "4.5.1": {
+  "date": 1538915158326,
+  "features": {
+   "new": [
+    ["Documentation has been removed from HaileyBot's website"],
+    ["ModLog icons are now colorblind-friendly"],
+    ["`$-register` now has a more accurate invite link check", "`$-bump` now checks if the ad's invite link has expired"]
+   ],
+   "upcoming": [
+    ["Sub-commands for `$-modlog`", "Role bypass for `$-filter`"]
+   ]
+  }
+ },
+
+ "4.5.2": {
+  "date": 1538984358246,
+  "features": {
+   "new": [
+    ["Color of `Verified` rank changed to green", "Added `EULA` rank that comes before `Verified`"],
+    ["Roles added on the main server for `EULA` and `Verified` ranks", ["Roles added automatically when a user accepts the EULA or becomes verified", "Roles added automatically when members join the server (only if the member is supposed to have the role)"]]
+   ],
+   "upcoming": [
+    ["Sub-commands for `$-modlog`", "Role bypass for `$-filter`"]
+   ]
+  }
+ },
+
+ "4.6": {
+  "date": 1539255074198,
+  "features": {
+   "new": [
+    ["Changed server icon based on poll results"],
+    ["Filter command now has a bypass option, so the filter won't delete messages from users with a certain role", ["`$-filter bypass` will DM you a list of the bypassed roles on your server", "`$-filter bypass @role` will toggle the bypass for the mentioned role (on if it's off, off if it's on)"]],
+    ["ModLog command now has a bypass option, so the ModLog won't log messages from certain channels", ["`$-modlog bypass` will DM you a list of the bypassed channels on your server", "`$-modlog bypass #channel` will toggle the bypass for the mentioned channel (on if it's off, off if it's on)", "Command to set log channel has changed to `$-modlog channel #channel`"]]
+   ],
+   "upcoming": [
+    ["Improvements and new sub-commands for `$-emote`"]
+   ]
+  }
+ },
+
+ "4.7": {
+  "date": 1539594061752,
+  "features": {
+   "new": [
+    ["`$-emote` now has a new sub-command called `add`", ["Uploads the provided URL or attachment as an emoji on your server", "Allows creation of emotes on mobile, where emote settings don't exist", "Check the `DOCUMENTATION` category or use `$-help emote` for full usage instructions"]]
+   ],
+   "upcoming": [
+    ["Tool to aid in the creation of a new server (configurable server templates)"]
+   ]
+  }
+ },
+
+ "4.8": {
+  "date": 1540217737507,
+  "features": {
+   "new": [
+    ["New command `$-beta` to apply to become a HaileyBot beta tester", ["`$-help beta` for more info"]]
+   ],
+   "upcoming": [
+    ["Sub-command for `$-beta` to list the required criteria for becoming a beta tester"]
+   ]
+  }
+ },
+
+ "5.0.1": {
+  "date": 1541510812775,
+  "features": {
+   "new": [
+    ["Edited the invite parser for `$-register`", ["Separates words based on whitespace (spacebar, tab, new line, etc) instead of just `spacebar`", "Having an invite link on its own line while registering an ad will no longer cause the bot to throw an error stating that there's no invite link"]],
+    ["Codeblocks are now allowed in global chat", ["Nothing malicious can be done with a codeblock that wouldn't be easier with plaintext", "Lack of ability to send a codeblock has caused frustration in users who had legitimate, non-malicious intentions"]]
+   ],
+   "upcoming": [
+    ["Modify bot script to make it perform the fewest operations possible", ["Remove unnecessary conditional checks", "Escape recursive searches once desired value is found (instead of looping through all remaining values)"]],
+    ["Rewrite old functions from scratch", ["Use a more modern syntax format to reduce file size", "Implement the newer, more performant features of ECMAScript6", "Use less conditional checks, more `return` statements (escape a function when an error occurs, instead of continuing [testing unnecessary conditionals along the way])"]],
+    ["Rework how commands and event handlers are stored, called, and executed", ["Give each command and handler its own script file", "Write a function to reload the contents of files individually, so a restart isn't required after a command or handler is edited (bot will stay online at all times, no more restarts just because one line was edited)", "Integrate a command's `help` object directly into its script file"]],
+    ["Reorganize the database", ["Create folder structure instead of putting every file into a single directory, giving them obscure names to avoid conflicts", "Combine similar files (ie guild-specific settings [autorole ID, welcome message, etc]) into a single `JSON` file, simplifying file management and naming conventions"]]
+   ]
+  }
+ },
+
+ "5.0.2": {
+  "date": 1542790638106,
+  "features": {
+   "new": [
+    ["ModLogs will no longer be sent to the wrong server", "HaileyBot is no longer able to mention @​everyone or @​here anywhere, regardless of permissions"]
+   ],
+   "upcoming": [
+    ["Bot mention as prefix", "Customizable prefix"],
+    ["Command aliases, so that multiple similarly-worded commands will execute the same command function"]
+   ]
+  }
+ }
+
+}
