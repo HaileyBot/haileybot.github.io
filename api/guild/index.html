@@ -6,7 +6,7 @@
   href.split("&").forEach(o => options[o.split("=")[0]] = o.split("=")[1];
  return options;                         
  }
- body.innerHTML = JSON.stringify(guild(window.location.href.split("?").pop()));
+ body.innerHTML = ""+JSON.stringify(guild(window.location.href.split("?").pop()))+"";
  }
 
 
