@@ -1,4 +1,5 @@
 <script type="text/javascript">
+  try{
   function guild(href) {
   if (!href.match(/^([a-zA-Z\d]{2,32}=[a-zA-Z\d]{2,32}(&(?=[\s\S]))?)+$/)) return { error: "Invalid HREF format: View documentation at https://haileybot.github.io/api/v1#href" };
    let options = {};
@@ -6,4 +7,7 @@
  return options;                         
  }
  document.write(JSON.stringify(guild(window.location.href.split("?").pop())));
-   </script>
+ }catch (e) {
+   document.write(e.stack)
+   }
+</script>
