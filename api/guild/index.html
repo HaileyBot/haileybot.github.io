@@ -1,8 +1,26 @@
 <script type="text/javascript">
- function guild(href) {
-  let options = {};
-  href.split("&").forEach(o => options[o.split("=")[0]] = o.split("=")[1]);
-  return options;
+ let href = window.location.href.split("?").pop(),
+  widget, options = {};
+ href.split("&").forEach(o => options[o.split("=")[0]] = o.split("=")[1]);
+ if (!options.id) document.write('{"error":"Must provide a server ID in HREF options"}');
+ else {
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", function() {
+   let r;
+   widget = JSON.parse(this.responseText);
+   switch (widget.code) {
+    case 10004:
+     r = { error: "Must provide a valid server ID" };
+     break;
+    case 50004:
+     r = { error: "Must enable server widget for API to work" };
+     break;
+    default:
+     r = options;
+   }
+   document.write(JSON.stringify(r));
+  });
+  oReq.open("GET", `https://discordapp.com/api/guilds/${options.id}/widget.json`);
+  oReq.send();
  }
- document.write(JSON.stringify(guild(window.location.href.split("?").pop())));
 </script>
