@@ -29,14 +29,22 @@ td .header {
 	border-top-left-radius: inherit;
 	border-top-right-radius: inherit;
 }
-#input {
+#input_d {
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 }
-#formatted {
+#input_m {
+	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
-#raw {
+#formatted_d {
+	border-top-right-radius: 20px;
+}
+#raw_d {
+	border-bottom-right-radius: 20px;
+}
+#raw_m {
+	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 }
 #topbar {
