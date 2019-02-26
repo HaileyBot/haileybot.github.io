@@ -1,0 +1,101 @@
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pt-40px {
+                padding-top: 40px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pb-40px {
+                padding-bottom: 40px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-fs-16 {
+                font-size: 16px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-bc-transparent {
+                background-color: transparent
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-border-left-width-0 {
+                border-left-width: 0
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-border-right-width-0 {
+                border-right-width: 0
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-border-top-width-0 {
+                border-top-width: 0
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-border-bottom-width-1px {
+                border-bottom-width: 1px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-border-radius-0 {
+                border-radius: 0
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pl-3px__important {
+                padding-left: 3px !important
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pr-35px__important {
+                padding-right: 35px !important
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx__CA__nth-childn-mb-20px> :nth-child(n) {
+                margin-bottom: 20px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx___CA__last-child-mb-0__important> :last-child {
+                margin-bottom: 0 !important
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-d-flex {
+                display: flex
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-flex-direction-column {
+                flex-direction: column
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pt-5px {
+                padding-top: 5px
+        }
+}
+
+@media (max-width: 767px) {
+        .x ._xs-onlypx_-pb-5px {
+                padding-bottom: 5px
+        }
+}
