@@ -4,7 +4,7 @@ $('#customer-testi').owlCarousel({
   nav: false,
   dots: true,
   autoplay:true,
-  autoplayTimeout:3000,
+  autoplayTimeout:5000,
   autoplayHoverPause:true,
   responsive:{
       0:{
@@ -24,7 +24,7 @@ $('#owl-fade').owlCarousel({
   nav: false,
   dots: true,
   autoplay:true,
-  autoplayTimeout:3000,
+  autoplayTimeout:5000,
   autoplayHoverPause:true,
   animateOut: 'fadeOut',
   items: 1,

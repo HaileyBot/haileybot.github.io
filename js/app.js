@@ -1,20 +1,3 @@
-/* Template Name: Landrick - Saas & Software Template
-   Author: Shreethemes
-   E-mail: shreethemes@gmail.com
-   Version: 1.0.0
-   Created: August 2019
-   File Description: Main JS file of the template
-*/
-
-/****************************/
-/*         INDEX            */
-/*===========================
- *     01.  Loader          *
- *     02.  Menu            *
- *     03.  Sticky Menu     *
- *     03.  Back to top     *
- ===========================*/
-
 ! function($) {
     "use strict"; 
     // Loader 
