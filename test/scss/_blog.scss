@@ -1,0 +1,267 @@
+//
+// blog.scss
+//
+.blog {
+    transition: all 0.3s ease;
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0; 
+        transition: all 0.5s ease;
+    }
+    .content {
+        h4 {
+            line-height: 1.2;
+        }
+        .title {
+            font-size: 20px;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $primary !important;
+            }
+        }
+        .post-meta {
+            .like, .comments, .readmore {
+                font-size: 15px;
+                transition: all 0.5s ease;
+            }
+            .like {
+                &:hover {
+                    color: $danger !important;
+                }
+            }
+            .comments {
+                &:hover {
+                    color: $success !important;
+                }
+            }
+            .readmore {
+                &:hover {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+    .author {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    &:hover {
+        transform: translateY(-10px);
+        .overlay {
+            opacity: 0.4;
+        }
+        .author {
+            opacity: 1;
+        }
+    }
+}
+
+//Sidebar
+.sidebar {
+    .widget {
+        .widget-search {
+            form {
+                position: relative;
+            }
+        }
+        .widget-search, .searchform { 
+            input[type="text"] {
+                box-shadow: none;
+                padding: 12px 15px;
+                height: 45px;
+                font-size: 14px;
+                display: block;
+                width: 100%;
+                outline: none !important;
+                padding-right: 45px;
+            }
+            input[type="submit"] {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                opacity: 0;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .widget-search {
+            .searchform:after {
+                content: "\F349";
+                position: absolute;
+                font-family: "Material Design Icons";
+                right: 16px;
+                top: 15px;
+                font-size: 20px;
+                line-height: 20px;
+                pointer-events: none;
+            }
+        }
+        .widget-title {
+            font-size: 18px;
+        }
+        
+        .catagories{
+            li {
+                padding-bottom: 10px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                a, span {
+                    font-size: 15px;
+                }
+                a {
+                    color: $dark;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }      
+        .post-recent {
+            padding-bottom: 15px;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            .post-recent-thumb {
+                width: 25%;
+            }
+            
+            .post-recent-content {
+                width: 75%;
+                padding-left: 10px;
+                a {
+                    display: block;
+                    color: $dark;
+                    font-size: 15px;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+        .tagcloud {
+            > a {
+                background: $gray-200;
+                color: $dark;
+                display: inline-block;
+                font-size: 9px;
+                letter-spacing: 1px;
+                margin: 5px 10px 5px 0;
+                padding: 8px 12px;
+                text-transform: uppercase;
+                transition: all 0.5s ease;
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// single blog
+.page-title {
+    font-size: 20px;
+}
+
+.media-list {
+    .comment-desk {
+        .commentor {
+            img {
+                height: 50px;
+            }
+        }
+        .media-heading {
+            font-size: 16px;
+        }
+        a {
+            &:hover{
+                color: $primary !important;
+            }
+        }
+    }
+    .sub-comment {
+        border-left: 2px dashed $gray-300;
+    }
+}
+
+//Pagination
+.pagination {    
+    line-height: 20px;
+    font-size: 13px;
+    li {
+        display: inline;
+        &:first-child a {
+            border-left-width: 1px;
+            border-radius: 20px 0 0 20px;
+        } 
+        &:last-child a{
+            border-radius: 0 20px 20px 0;
+        }
+        a {
+            float: left;
+            text-decoration: none;
+            color: $dark;
+            border: 1px solid $gray-300;
+            border-left-width: 0;
+            background: $white; 
+            &:hover {
+                color: $white;
+                background: lighten($primary, 5%);
+                border-color: lighten($primary, 5%);
+            }
+        }
+    }              
+    .active a {
+        color: $white;
+        background: $primary !important;
+        border-color: $primary;
+        cursor: not-allowed;
+    }
+}
+
+
+//Jobs and Careers
+.job-content {
+    transition: all 0.5s ease;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -45px;
+        right: -80px;
+        width: 230px;
+        height: 130px;
+        transform: rotate(45deg);
+        background: lighten($primary, 45%);
+        z-index: -1;
+    }
+    .head {
+        .title {
+            font-size: 18px;
+            &:hover {
+                color: $primary !important;
+            }
+        }
+        .firm {
+            &:hover {
+                color: $danger !important;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: $shadow;
+        transform: translateY(-5px);
+    }
+}
