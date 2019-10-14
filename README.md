@@ -1,10 +1,10 @@
 ![Status][status] ![Uptime][uptime] ![Servers][servers] ![Version][version] ![License][license]
 
-[status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat-square&color=brightgreen
-[uptime]: https://botlist.space/bot/423637161632464906/badge?property=uptime.2&style=flat-square&color=brightgreen
-[servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat-square&color=informational
-[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?style=flat-square&color=blueviolet
-[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square
+[status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat&color=brightgreen
+[uptime]: https://botlist.space/bot/423637161632464906/badge?property=uptime.2&style=flat&color=brightgreen
+[servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat&color=informational
+[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?style=flat&color=blueviolet
+[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat
 # Overview
 HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. Getting to that point takes time, and we're still on our way, but with every new update comes a new feature, bringing us closer to our goal of becoming a bot to replace all bots.
 # Features
