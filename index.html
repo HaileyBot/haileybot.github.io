@@ -43,6 +43,7 @@
   <!-- Main css -->
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 
+  <script type="text/javascript" src="js/mobileCheck.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
     const crate = new Crate({
       server: '413486862175436812',
@@ -483,7 +484,7 @@
 
     <center>
 
-      <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" class="pageclip-form" method="post" style="text-align: left; width: 30%; border: 1px solid #ecedf0; border-radius: 10px; background-color: #f8f9fc; padding: 1em">
+      <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" id="review" class="pageclip-form" method="post" style="text-align: left; width: 100%; border: 1px solid #ecedf0; border-radius: 10px; background-color: #f8f9fc; padding: 1em">
         <fieldset>
           <legend style="text-align: center;">Leave a Review</legend>
           <label for="tag">Discord Tag:</label><br>
@@ -552,6 +553,10 @@
   });
   oReq.open("GET", `https://cors-anywhere.herokuapp.com/https://discordapp.com/api/guilds/543000673189363725/widget.json`);
   oReq.send();
+
+  let width = "30%";
+  if (window.mobilecheck()) width = "80%";
+  document.getElementById("review").style.width = width;
 </script>
 
 </html>
