@@ -42,18 +42,18 @@
   <!-- Main css -->
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-  <!-- https://cdn.jsdelivr.net/npm/@widgetbot/crate@3 -->
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    new Crate({
+    const crate = new Crate({
       server: '413486862175436812',
       channel: '415414239293865985',
-      shard: 'https://disweb.deploys.io',
+      shard: 'https://disweb.deploys.io', // stable
+      //shard: 'https://e.widgetbot.io',    // beta
       css: `
         .root .embed {
           width: 75%;
         }
       `
-    })
+    });
   </script>
   <script data-ad-client="ca-pub-5607857511897725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
