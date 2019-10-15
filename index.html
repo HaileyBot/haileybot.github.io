@@ -46,16 +46,28 @@
   <script type="text/javascript" src="js/mobileCheck.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
     const crate = new Crate({
-      server: '413486862175436812',
-      channel: '415414239293865985',
-      shard: 'https://disweb.deploys.io', // stable
-      //shard: 'https://e.widgetbot.io',    // beta
+      server: "413486862175436812",
+      channel: "415414239293865985",
+      //shard: "https://disweb.deploys.io",     // stable
+      //shard: "https://e.widgetbot.io",        // beta
+      shard: "https://greatplainsmodding.ml", // third-party
       css: `
         .root .embed {
           width: 75%;
         }
-      `
+      `,
+      indicator: false,
+      glyph: [
+        "images/server.png",
+        "100%"
+      ],
+      color: "#5a457d"
     });
+    crate.notify({
+      content: "Click the button below to preview HaileyBot's support server",
+      timeout: 10000,
+      avatar: "images/cheesits456.gif"
+    })
   </script>
   <script data-ad-client="ca-pub-5607857511897725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
