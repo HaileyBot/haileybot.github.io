@@ -53,7 +53,7 @@
       shard: "https://greatplainsmodding.ml", // third-party
       css: `
         .root .embed {
-          width: 75%;
+          width: ${window.mobilecheck() ? "100%" : "75%"};
         }
       `,
       indicator: false,
