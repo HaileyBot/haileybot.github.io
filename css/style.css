@@ -32,6 +32,16 @@
   background-color: #2f55d4 !important;
 }
 
+.mention {
+  background-color: #dbe3ff;
+  border: 1px solid #c9d5ff;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #6988ff;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
 .text-primary {
   color: #2f55d4 !important;
 }
