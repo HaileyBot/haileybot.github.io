@@ -39,7 +39,7 @@
   <!-- Slider -->
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+  <link rel="stylesheet" href="css/pageclip.css" media="screen">
   <!-- Main css -->
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 
@@ -64,7 +64,7 @@
       color: "#5a457d"
     });
     crate.notify({
-      content: "Click the button below to preview HaileyBot's support server",
+      content: "Click the icon below to preview HaileyBot's support server",
       timeout: 10000,
       avatar: "images/cheesits456.gif"
     })
@@ -91,10 +91,10 @@
       <div>
         <a class="logo" href="#">Hailey<span class="text-primary">Bot</span></a>
       </div>
-      <div class="btn buy-button">
+      <div class="btn buy-button hide-mobile">
         <a href="https://invite.haileybot.com" target="_blank" class="btn btn-primary">Add Bot</a>
       </div>
-      <div class="btn buy-button">
+      <div class="btn buy-button hide-mobile">
         <a href="https://server.haileybot.com" target="_blank" class="btn btn-outline-primary">Join Server</a>
       </div>
       <!--end login button-->
@@ -116,7 +116,9 @@
       <div id="navigation">
         <!-- Navigation Menu-->
         <ul class="navigation-menu">
-            <li><a href="#">Home</a></li>
+          <li><a href="https://docs.haileybot.com" target="_blank" class="text-primary show-mobile">Add Bot</a></li>
+          <li><a href="https://docs.haileybot.com" target="_blank" class="text-primary show-mobile">Join Server</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="https://docs.haileybot.com" target="_blank">Docs</a></li>
           <li><a href="https://github.com/HaileyBot" target="_blank">GitHub</a></li>
           <li><a href="https://shop.haileybot.com">Shop</a></li>
@@ -143,7 +145,7 @@
             </div>
             <!--end col-->
 
-            <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
+            <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
               <img src="images/haileybot.png" class="img-fluid mx-auto d-block" alt="">
             </div>
           </div>
@@ -329,7 +331,7 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-ads" role="tabpanel" aria-labelledby="pills-ads-tab">
               <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 hide-mobile">
                   <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
                 </div>
                 <!--end col-->
@@ -353,7 +355,7 @@
 
             <div class="tab-pane fade" id="pills-global" role="tabpanel" aria-labelledby="pills-global-tab">
               <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 hide-mobile">
                   <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
                 </div>
                 <!--end col-->
@@ -376,7 +378,7 @@
 
             <div class="tab-pane fade" id="pills-mod" role="tabpanel" aria-labelledby="pills-mod-tab">
               <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 hide-mobile">
                   <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
                 </div>
                 <!--end col-->
@@ -404,7 +406,7 @@
 
             <div class="tab-pane fade" id="pills-misc" role="tabpanel" aria-labelledby="pills-misc-tab">
               <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 hide-mobile">
                   <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
                 </div>
                 <!--end col-->
@@ -571,6 +573,16 @@
   let width = "30%";
   if (window.mobilecheck()) width = "80%";
   document.getElementById("review").style.width = width;
+
+  let show = Array.prototype.slice.call(document.getElementsByClassName("show-mobile"));
+  show.forEach(e => {
+    if (!window.mobilecheck()) e.style.display = "none";
+  })
+
+  let hide = Array.prototype.slice.call(document.getElementsByClassName("hide-mobile"));
+  hide.forEach(e => {
+    if (window.mobilecheck()) e.style.display = "none";
+  })
 </script>
 
 </html>
