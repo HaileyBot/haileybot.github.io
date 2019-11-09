@@ -1,10 +1,10 @@
 ![Status][status] ![Uptime][uptime] ![Servers][servers] ![Version][version] ![License][license]
 
-[status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat&color=brightgreen
-[uptime]: https://botlist.space/bot/423637161632464906/badge?property=uptime.2&style=flat&color=brightgreen
-[servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat&color=informational
-[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet
-[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io
+[status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat-square&color=brightgreen
+[uptime]: https://botlist.space/bot/423637161632464906/badge?property=uptime.2&style=flat-square&color=brightgreen
+[servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat-square&color=informational
+[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?style=flat-square&color=blueviolet
+[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square
 
 ---
 # Overview
