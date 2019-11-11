@@ -114,7 +114,7 @@
             <li class="has-submenu">
               <a>Bot</a><span class="menu-arrow"></span>
               <ul class="submenu">
-                <li><a href="https://shop.haileybot.com">Shop <span class="badge badge-success nav-menu-left nav-menu-badge">New</span></a></li>
+                <li><a href="https://shop.haileybot.com">Shop <span class="badge badge-success nav-menu-right nav-menu-badge">New</span></a></li>
                 <li><a href="https://github.com/HaileyBot">GitHub</a></li>
               </ul>
             </li>
@@ -124,8 +124,8 @@
                 <li><a href="https://docs.haileybot.com/">Overview</a></li>
                 <li><a href="https://faq.haileybot.com">Frequently Asked</a></li>
                 <hr style="opacity: 25%; margin: 20px; margin-top: 10px; margin-bottom: 10px">
-                <li><a href="https://license.haileybot.com" target="_blank">License<span class="mdi mdi-open-in-new rem-1 nav-menu-left nav-menu-icon"></span></a></li>
-                <li><a href="https://eula.haileybot.com" target="_blank">EULA<span class="mdi mdi-open-in-new rem-1 nav-menu-left nav-menu-icon"></span></a></li>
+                <li><a href="https://license.haileybot.com" target="_blank">License<span class="mdi mdi-open-in-new rem-1 nav-menu-right nav-menu-icon"></span></a></li>
+                <li><a href="https://eula.haileybot.com" target="_blank">EULA<span class="mdi mdi-open-in-new rem-1 nav-menu-right nav-menu-icon"></span></a></li>
               </ul>
             </li>
           </ul>
@@ -557,13 +557,13 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrollspy.min.js"></script>
-    <!-- SLIDER -->
     <script src="js/owl.carousel.min.js "></script>
     <script src="js/owl.init.js "></script>
-    <!-- Main Js -->
     <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
+  
   <script type="text/javascript">
     var oReq = new XMLHttpRequest();
     oReq.addEventListener("load", function() {
@@ -579,26 +579,6 @@
     let width = "30%";
     if (window.mobilecheck()) width = "80%";
     document.getElementById("review").style.width = width;
-
-    let e = Array.prototype.slice.call(document.getElementsByClassName("show-mobile"));
-    e.forEach(a => {
-      if (!window.mobilecheck()) a.style.display = "none";
-    })
-
-    e = Array.prototype.slice.call(document.getElementsByClassName("hide-mobile"));
-    e.forEach(a => {
-      if (window.mobilecheck()) a.style.display = "none";
-    })
-
-    e = Array.prototype.slice.call(document.getElementsByClassName("nav-menu-badge"));
-    e.forEach(a => {
-      if (window.mobilecheck()) a.style.marginBottom = "7px";
-    })
-
-    e = Array.prototype.slice.call(document.getElementsByClassName("nav-menu-icon"));
-    e.forEach(a => {
-      if (window.mobilecheck()) a.style.paddingBottom = "4px";
-    })
   </script>
 
 </html>
