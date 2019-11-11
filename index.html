@@ -47,11 +47,11 @@
       notifications: true,
       indicator: true
     });
-    crate.notify({
-      content: "Need help? Join the support server to receive assistance!",
-      timeout: 10000,
-      avatar: "images/cheesits456.gif"
-    })
+    //crate.notify({
+    //  content: "Need help? Join the support server to receive assistance!",
+    //  timeout: 10000,
+    //  avatar: "images/cheesits456.gif"
+    //})
   </script>
 </head>
 
@@ -500,24 +500,6 @@
       </div>
     </div>
 
-    <br><br><br>
-
-    <!-- Feedback Form -->
-    <center>
-      <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" id="review" class="pageclip-form" method="post" style="text-align: left; width: 100%; border: 1px solid #ecedf0; border-radius: 10px; background-color: #f8f9fc; padding: 1em">
-        <fieldset>
-          <legend style="text-align: center;">Leave a Review</legend>
-          <label for="tag">Discord Tag:</label><br>
-          <input name="tag" type="text" placeholder="Username#0000" required style="width: 100%;"><br><br>
-          <label for="review">Review:</label><br>
-          <textarea name="review" rows="4" required style="width: 100%;"></textarea><br>
-          <button type="submit" class="pageclip-form__submit" style="width: 100%;">
-            <span>Send</span>
-          </button>
-        </fieldset>
-      </form>
-    </center>
-
     <!-- Background Image -->
     <div class="container-fluid">
       <div class="row">
@@ -532,16 +514,25 @@
   <!-- Footer -->
   <footer class="footer footer-bar">
     <div class="container text-center">
-      <div class="row align-items-center">
-        <div class="col-sm-3">
-          <h3 class="text-light mb-0">Hailey<span class="text-primary">Bot</span></h3>
+      <div class="row align-items-top">
+        <div class="col-sm-3 text-sm-left">
+          <h1 class="text-light mb-0">Hailey<span class="text-primary">Bot</span></h1>
           <div class="small">© 2019 cheesits#0456</div>
+          <div class="pt-4 pb-4 text-light">
+            <div><i class="mdi mdi-github-circle"></i> <a href="https://github.com/HaileyBot" target="_blank" class="text-foot">GitHub</a></div>
+            <div><i class="mdi mdi-email"></i> <a href="mailto:contact@haileybot.com" target="_blank" class="text-foot">Email</a></div>
+          </div>
         </div>
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-3">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-4 text-sm-left pr-4">
+          <h5 class="title mb-0 text-center pb-1">Leave a Review</h5>
+          <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" class="pageclip-form pr-2" method="post">
+            <div class="form-group mb-0">
+              <input name="tag" type="text" class="form-control" placeholder="Username#0000" required>
+              <textarea name="review" rows="4" class="form-control mt-1 mb-1" required placeholder="Write a review here"></textarea>
+              <button type="submit" name="send" class="btn btn-block btn-primary pageclip-form__submit">Send</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
