@@ -1,579 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <title>HaileyBot</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. Suggest whatever feature you want, and if it's a good idea, it'll be added to the bot.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="HaileyBot">
-  <meta property="og:url" content="https://www.haileybot.com">
-  <meta property="og:description" content="HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. Suggest whatever feature you want, and if it's a good idea, it'll be added to the bot.">
-  <meta name="msapplication-TileColor" content="#2c75ff">
-  <meta name="keywords" content="discord, guild, server, HaileyBot, bot, network, cheesits, global discord chat, global chat, hub">
-  <meta property="og:type" content="object">
-  <meta property="og:image" content="https://www.haileybot.com/images/haileybot.png">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/haileybot.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="HaileyBot">
-  <link rel="apple-touch-icon-precomposed" href="images/haileybot.png">
-  <meta name="msapplication-TileImage" content="https://www.haileybot.com/images/haileybot.png">
-  <meta name="theme-color" content="#2c75ff">
-  <link rel="shortcut icon" href="images/haileybot.png">
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <!-- Icons -->
-  <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-  <!-- Slider -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="css/pageclip.css" media="screen">
-  <!-- Main css -->
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="utf-8" />
+    <title>HaileyBot</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. Suggest whatever feature you want, and if it's a good idea, it'll be added to the bot.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="HaileyBot">
+    <meta property="og:url" content="https://www.haileybot.com">
+    <meta property="og:description" content="HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. Suggest whatever feature you want, and if it's a good idea, it'll be added to the bot.">
+    <meta name="msapplication-TileColor" content="#2c75ff">
+    <meta name="keywords" content="discord, guild, server, HaileyBot, bot, network, cheesits, global discord chat, global chat, hub">
+    <meta property="og:type" content="object">
+    <meta property="og:image" content="https://www.haileybot.com/images/haileybot.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/haileybot.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HaileyBot">
+    <link rel="apple-touch-icon-precomposed" href="images/haileybot.png">
+    <meta name="msapplication-TileImage" content="https://www.haileybot.com/images/haileybot.png">
+    <meta name="theme-color" content="#2c75ff">
+    <link rel="shortcut icon" href="images/haileybot.png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons -->
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Slider -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/pageclip.css" media="screen">
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
-  <script type="text/javascript" src="js/mobileCheck.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    const crate = new Crate({
-      server: "413486862175436812",
-      channel: "415414239293865985",
-      //shard: "https://disweb.deploys.io",     // stable
-      //shard: "https://e.widgetbot.io",        // beta
-      shard: "https://greatplainsmodding.ml", // third-party
-      css: `
+    <script type="text/javascript" src="js/mobileCheck.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+      const crate = new Crate({
+        server: "413486862175436812",
+        channel: "415414239293865985",
+        //shard: "https://disweb.deploys.io",     // stable
+        //shard: "https://e.widgetbot.io",        // beta
+        shard: "https://greatplainsmodding.ml", // third-party
+        css: `
         .root .embed {
           width: ${window.mobilecheck() ? "100%" : "75%"};
         }
       `,
-      indicator: false,
-      glyph: [
-        "images/server.png",
-        "100%"
-      ],
-      color: "#5a457d"
+        indicator: false,
+        glyph: [
+          "images/server.png",
+          "100%"
+        ],
+        color: "#5a457d"
+      });
+      crate.notify({
+        content: "Click the icon below to preview HaileyBot's support server",
+        timeout: 10000,
+        avatar: "images/cheesits456.gif"
+      })
+    </script>
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="preloader">
+      <div id="status">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Loader -->
+
+    <!-- Navbar STart -->
+    <header id="topnav" class="defaultscroll sticky">
+      <div class="container">
+        <!-- Logo container-->
+        <div>
+          <a class="logo" href="#">Hailey<span class="text-primary">Bot</span></a>
+        </div>
+        <div class="buy-button hide-mobile">
+          <a href="https://invite.haileybot.com" target="_blank" class="btn btn-primary">Add Bot</a>
+        </div>
+        <div class="buy-button hide-mobile" style="padding-right: 0.25em">
+          <a href="https://server.haileybot.com" target="_blank" class="btn btn-outline-primary">Join Server</a>
+        </div>
+        <!--end login button-->
+        <!-- End Logo container-->
+        <div class="menu-extras">
+          <div class="menu-item">
+            <!-- Mobile menu toggle-->
+            <a class="navbar-toggle">
+              <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+            <!-- End mobile menu toggle-->
+          </div>
+        </div>
+
+        <div id="navigation">
+          <!-- Navigation Menu-->
+          <ul class="navigation-menu">
+            <li class="show-mobile"><a href="https://invite.haileybot.com" target="_blank" class="text-primary">Add Bot</a></li>
+            <li class="show-mobile"><a href="https://server.haileybot.com" target="_blank" class="text-primary">Join Server</a>
+              <hr style="opacity: 25%; margin-top: 10px; margin-bottom: 10px">
+            </li>
+            <li><a class="text-primary">Home</a></li>
+            <li class="has-submenu">
+              <a>Bot</a><span class="menu-arrow"></span>
+              <ul class="submenu">
+                <li><a href="https://shop.haileybot.com">Shop <span class="badge badge-success nav-menu-left nav-menu-badge">New</span></a></li>
+                <li><a href="https://github.com/HaileyBot">GitHub</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a>Docs</a><span class="menu-arrow"></span>
+              <ul class="submenu">
+                <li><a href="https://docs.haileybot.com/">Overview</a></li>
+                <li><a href="https://faq.haileybot.com">Frequently Asked</a></li>
+                <hr style="opacity: 25%; margin: 20px; margin-top: 10px; margin-bottom: 10px">
+                <li><a href="https://license.haileybot.com" target="_blank">License<span class="mdi mdi-open-in-new rem-1 nav-menu-left nav-menu-icon"></span></a></li>
+                <li><a href="https://eula.haileybot.com" target="_blank">EULA<span class="mdi mdi-open-in-new rem-1 nav-menu-left nav-menu-icon"></span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <!--end navigation menu-->
+        </div>
+      </div>
+      <!--end container-->
+    </header>
+    <!--end header-->
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="bg-half-170" id="home">
+      <div class="home-center">
+        <div class="home-desc-center">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-7">
+                <div class="title-heading mt-4">
+                  <h1 class="heading mb-3">Manage your server with <span class="text-primary">HaileyBot</span></h1>
+                  <p class="para-desc text-muted">With nearly every feature you can think of, as well as dedicated staff and an active support team, HaileyBot is the perfect addition to any Discord server. <span class="text-primary">Scroll down to learn more . . .</span></p>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
+                <img src="images/haileybot.png" class="img-fluid mx-auto d-block" alt="">
+              </div>
+            </div>
+            <!--end row-->
+          </div>
+          <!--end container-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="home-shape-bottom">
+                <img src="images/shapes/round-light.png" alt="" class="img-fluid mx-auto d-block">
+              </div>
+            </div>
+            <!--end row-->
+          </div> <!-- END CONTAINER -->
+        </div>
+        <!--end home desc center-->
+      </div>
+      <!--end home center-->
+    </section>
+    <!--end section-->
+    <!-- Hero End -->
+
+    <!-- Features Start -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-title mb-60">
+              <h4 class="main-title mb-4">Statistics</h4>
+              <p class="text-muted para-desc mb-0 mx-auto">The below statistics are fetched live from a custom API, and are here to demonstrate the scale of this project.</p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-8">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-account icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-members"></span> Members</h4>
+                    <p class="text-muted para mb-0">the combined total of every user who shares a server with HaileyBot</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-server icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-servers"></span> Servers</h4>
+                    <p class="text-muted para mb-0">the total number of servers HaileyBot is in</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-code-greater-than icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-commands"></span> Commands</h4>
+                    <p class="text-muted para mb-0">the total number of commands executed over HaileyBot's lifetime</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-chart-line icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-ads"></span> Ads</h4>
+                    <p class="text-muted para mb-0">the total number of user ads registered to HaileyBot</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-message icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-global-channels"></span> Global Channels</h4>
+                    <p class="text-muted para mb-0">the total number of channels connected to the global chat</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-md-6 col-12">
+                <div class="features p-1 pt-4 pb-4">
+                  <i class="mdi mdi-gavel icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+
+                  <div class="content d-block overflow-hidden">
+                    <h4 class="title"><span id="stats-global-bans"></span> Global Bans</h4>
+                    <p class="text-muted para mb-0">the total number of users on the global ban list</p>
+                  </div>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- Feature End -->
+
+    <!-- Showcase Start -->
+    <section class="section pt-0 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-title mb-60">
+              <h4 class="main-title mb-4">Features</h4>
+              <p class="text-muted para-desc mb-0 mx-auto">Add <span class="text-primary font-weight-bold">HaileyBot</span> to your server to get all the following features and more!</p>
+
+              <div class="row mt-4 justify-content-center">
+                <div class="col-lg-8 col-md-12 text-center">
+                  <ul class="nav nav-pills nav-justified flex-column flex-sm-row" id="pills-tab" role="tablist">
+                    <li class="nav-item mt-4 pt-2">
+                      <a class="nav-link rounded active" id="pills-ads-tab" data-toggle="pill" href="#pills-ads" role="tab" aria-controls="pills-ads" aria-selected="false">
+                        <div class="text-center pt-1 pb-1">
+                          <h4 class="title font-weight-normal mb-0">Ads</h4>
+                        </div>
+                      </a>
+                      <!--end nav link-->
+                    </li>
+                    <!--end nav item-->
+
+                    <li class="nav-item mt-4 pt-2">
+                      <a class="nav-link rounded" id="pills-global-tab" data-toggle="pill" href="#pills-global" role="tab" aria-controls="pills-global" aria-selected="false">
+                        <div class="text-center pt-1 pb-1">
+                          <h4 class="title font-weight-normal mb-0">Global Chat</h4>
+                        </div>
+                      </a>
+                      <!--end nav link-->
+                    </li>
+                    <!--end nav item-->
+
+                    <li class="nav-item mt-4 pt-2">
+                      <a class="nav-link rounded" id="pills-mod-tab" data-toggle="pill" href="#pills-mod" role="tab" aria-controls="pills-mod" aria-selected="false">
+                        <div class="text-center pt-1 pb-1">
+                          <h4 class="title font-weight-normal mb-0">Moderation</h4>
+                        </div>
+                      </a>
+                      <!--end nav link-->
+                    </li>
+                    <!--end nav item-->
+                    <li class="nav-item mt-4 pt-2">
+                      <a class="nav-link rounded" id="pills-misc-tab" data-toggle="pill" href="#pills-misc" role="tab" aria-controls="pills-misc" aria-selected="false">
+                        <div class="text-center pt-1 pb-1">
+                          <h4 class="title font-weight-normal mb-0">Miscellaneous</h4>
+                        </div>
+                      </a>
+                      <!--end nav item-->
+                  </ul>
+                  <!--end nav pills-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row">
+          <div class="col-12">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-ads" role="tabpanel" aria-labelledby="pills-ads-tab">
+                <div class="row align-items-center">
+                  <div class="col-md-6 hide-mobile">
+                    <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title">
+                      <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Spread your name</h4>
+                      <p class="text-muted">This feature is for helping server owners spread the word about their growing servers, and also for helping newer Discord users find a community they want to join.</p>
+                      <ul class="list-unstyled feature-list text-muted">
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Create your own customized advertisement</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Bump your ad every 2 hours</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>View all the ads in a channel on HaileyBot's server</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </div>
+              <!--end teb pane-->
+
+              <div class="tab-pane fade" id="pills-global" role="tabpanel" aria-labelledby="pills-global-tab">
+                <div class="row align-items-center">
+                  <div class="col-md-6 hide-mobile">
+                    <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title">
+                      <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Connect with new people</h4>
+                      <p class="text-muted">This feature is for linking up different channels across different servers, so that you can meet new people and form new connections.</p>
+                      <ul class="list-unstyled feature-list text-muted">
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Link a channel to a multi-server global chat</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Connect your own channels to each other across servers</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </div>
+              <!--end teb pane-->
+
+              <div class="tab-pane fade" id="pills-mod" role="tabpanel" aria-labelledby="pills-mod-tab">
+                <div class="row align-items-center">
+                  <div class="col-md-6 hide-mobile">
+                    <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title">
+                      <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Keep it clean</h4>
+                      <p class="text-muted">HaileyBot has an extensive list of moderation commands and functions for helping you keep your server the way you want it to be.</p>
+                      <ul class="list-unstyled feature-list text-muted">
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically grant new users a designated role</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Kick, ban, or warn members with a simple command</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically delete messages containing your set words/phrases</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Set up welcome/goodbye messages for when members join or leave</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Set up a live stat tracker for your server</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically log all server activity to a designated channel</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Bulk delete large amounts of messages</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </div>
+              <!--end teb pane-->
+
+              <div class="tab-pane fade" id="pills-misc" role="tabpanel" aria-labelledby="pills-misc-tab">
+                <div class="row align-items-center">
+                  <div class="col-md-6 hide-mobile">
+                    <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
+                  </div>
+                  <!--end col-->
+
+                  <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title">
+                      <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Have fun</h4>
+                      <p class="text-muted">HaileyBot has many miscellaneous commands that can vastly improve the user experience.</p>
+                      <ul class="list-unstyled feature-list text-muted">
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Get the answer to any objective, fact-based question</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Search Google without needing to leave Discord</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Create a poll for users to vote on</li>
+                        <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>View detailed information about the specified user, server, or emote</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </div>
+              <!--end teb pane-->
+            </div>
+            <!--end tab content-->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="home-shape-bottom">
+            <img src="images/shapes/round-white.png" alt="" class="img-fluid mx-auto d-block">
+          </div>
+        </div>
+        <!--end row-->
+      </div> <!-- END CONTAINER -->
+    </section>
+    <!--end section-->
+    <!-- Showcase End -->
+    <br><br><br>
+    <!-- Testi n Download cta start -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="customer-testi" class="owl-carousel owl-theme">
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/498511734366011403/632530428112142346/image0.jpg" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"The most versatile bot I've seen yet, packed with many features"</p>
+                <h6 class="text-primary">- folding.exe#0001</h6>
+              </div>
+
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/522040473376915456/630049275186905088/b42bbdc728f5d82622078b3b09d2f32c.png" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"I used HaileyBot to replace 4 other bots that all didnt work as well as HaileyBot! I have been looking for a bot to connect multiple servers privately for more than 6 months, HaileyBot does it with ease! The creator is active, and super helpful! Thank you HaileyBot! I look forward to removing future bots from my servers thanks to your future updates. Favorite Discord bot to date!"</p>
+                <h6 class="text-primary">- Phantom51180#0206</h6>
+              </div>
+
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/498511734366011403/630569355066736691/eba0f71aed382535b5587210cb6ad3aa.png" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"HaileyBot is one of my favorite bots! It comes with all the features and diversities from bumping to moderation. I went out of my way to add HaileyBot to my server and watched as it grew and looked more professional. Strongly recommend this bot. Deleted many bots from my server because HaileyBot offers the features of those bots. Quality over quantity, Always."</p>
+                <h6 class="text-primary">- Crooklyn's_Finest#9525</h6>
+              </div>
+
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/498511734366011403/630592271171059732/e57375f6452fda7721905bd7a98486a9.png" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"As an Admin for the chat and the main hub of the bot, I do love having the ability to chat with multiple users and servers without the need of randomly reconnecting to a new user/server. I can watch the chat all at once and help out the new users who are intrigued on how the chat, moderation logs and advertisements work. My score: 11/10 IGN. Would recommend to my family."</p>
+                <h6 class="text-primary">- Mr. Kristofferson#9911</h6>
+              </div>
+
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/498511734366011403/632471171912433665/a_8c7fc380e3ae83d91c7ba27b8697deac.png" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"The bot has a lot of positive functions, the most I like about this bot is communication between other servers, communication is smooth and secure."</p>
+                <h6 class="text-primary">- DeJzer#3622</h6>
+              </div>
+
+              <div class="customer-testi p-3 text-center">
+                <img src="https://cdn.discordapp.com/attachments/498511734366011403/632472094239752223/205e8ccc0d4c72a1dec97a4f0654d49d.png" height="80" class="rounded-pill mx-auto shadow" alt="">
+                <p class="text-muted mt-4">"Hell yeah, this bot is unique and the creator of it is one to look up too."</p>
+                <h6 class="text-primary">- destroyer101AF13#3379</h6>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+      <br><br><br>
+
+      <center>
+
+        <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" id="review" class="pageclip-form" method="post" style="text-align: left; width: 100%; border: 1px solid #ecedf0; border-radius: 10px; background-color: #f8f9fc; padding: 1em">
+          <fieldset>
+            <legend style="text-align: center;">Leave a Review</legend>
+            <label for="tag">Discord Tag:</label><br>
+            <input name="tag" type="text" placeholder="Username#0000" required style="width: 100%;"><br><br>
+            <label for="review">Review:</label><br>
+            <textarea name="review" rows="4" required style="width: 100%;"></textarea><br>
+            <button type="submit" class="pageclip-form__submit" style="width: 100%;">
+              <span>Send</span>
+            </button>
+          </fieldset>
+        </form>
+
+      </center>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="home-shape-bottom">
+            <img src="images/shapes/round-dark.png" alt="" class="img-fluid mx-auto d-block">
+          </div>
+        </div>
+        <!--end row-->
+      </div> <!-- END CONTAINER -->
+    </section>
+    <!--end section-->
+    <!-- Testi n Download cta End -->
+
+    <!-- Footer Start -->
+    <footer class="footer footer-bar">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-sm-6">
+            <div class="text-sm-left">
+              <a class="logo-footer" href="#">Hailey<span class="text-primary">Bot</span></a>
+              <p class="mb-0">© 2019 cheesits#0456</p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </footer>
+    <!--end footer-->
+    <!-- Footer End -->
+
+    <!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <!-- SLIDER -->
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/owl.init.js "></script>
+    <!-- Main Js -->
+    <script src="js/app.js"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  </body>
+  <script type="text/javascript">
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", function() {
+      let r;
+      widget = JSON.parse(this.response);
+      widget.channels.forEach(c => {
+        document.getElementById(`stats-${c.name.toLowerCase().split(":")[0].replace(/ /g, "-")}`).innerHTML = c.name.split(":")[1];
+      })
     });
-    crate.notify({
-      content: "Click the icon below to preview HaileyBot's support server",
-      timeout: 10000,
-      avatar: "images/cheesits456.gif"
+    oReq.open("GET", `https://cors-anywhere.herokuapp.com/https://discordapp.com/api/guilds/543000673189363725/widget.json`);
+    oReq.send();
+
+    let width = "30%";
+    if (window.mobilecheck()) width = "80%";
+    document.getElementById("review").style.width = width;
+
+    let e = Array.prototype.slice.call(document.getElementsByClassName("show-mobile"));
+    e.forEach(a => {
+      if (!window.mobilecheck()) a.style.display = "none";
+    })
+
+    e = Array.prototype.slice.call(document.getElementsByClassName("hide-mobile"));
+    e.forEach(a => {
+      if (window.mobilecheck()) a.style.display = "none";
+    })
+
+    e = Array.prototype.slice.call(document.getElementsByClassName("nav-menu-badge"));
+    e.forEach(a => {
+      if (window.mobilecheck()) a.style.marginBottom = "7px";
+    })
+
+    e = Array.prototype.slice.call(document.getElementsByClassName("nav-menu-icon"));
+    e.forEach(a => {
+      if (window.mobilecheck()) a.style.paddingBottom = "4px";
     })
   </script>
-  <script data-ad-client="ca-pub-5607857511897725" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-
-<body>
-  <!-- Loader -->
-  <div id="preloader">
-    <div id="status">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-      </div>
-    </div>
-  </div>
-  <!-- Loader -->
-
-  <!-- Navbar STart -->
-  <header id="topnav" class="defaultscroll sticky">
-    <div class="container">
-      <!-- Logo container-->
-      <div>
-        <a class="logo" href="#">Hailey<span class="text-primary">Bot</span></a>
-      </div>
-      <div class="btn buy-button hide-mobile">
-        <a href="https://invite.haileybot.com" target="_blank" class="btn btn-primary">Add Bot</a>
-      </div>
-      <div class="btn buy-button hide-mobile">
-        <a href="https://server.haileybot.com" target="_blank" class="btn btn-outline-primary">Join Server</a>
-      </div>
-      <!--end login button-->
-      <!-- End Logo container-->
-      <div class="menu-extras">
-        <div class="menu-item">
-          <!-- Mobile menu toggle-->
-          <a class="navbar-toggle">
-            <div class="lines">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </a>
-          <!-- End mobile menu toggle-->
-        </div>
-      </div>
-
-      <div id="navigation">
-        <!-- Navigation Menu-->
-        <ul class="navigation-menu">
-          <li class="show-mobile"><a href="https://invite.haileybot.com" target="_blank" class="text-primary">Add Bot</a></li>
-          <li class="show-mobile"><a href="https://server.haileybot.com" target="_blank" class="text-primary">Join Server</a><hr style="opacity: 25%"></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="https://docs.haileybot.com" target="_blank">Docs</a></li>
-          <li><a href="https://github.com/HaileyBot" target="_blank">GitHub</a></li>
-          <li><a href="https://shop.haileybot.com">Shop</a></li>
-        </ul>
-        <!--end navigation menu-->
-      </div>
-    </div>
-    <!--end container-->
-  </header>
-  <!--end header-->
-  <!-- Navbar End -->
-
-  <!-- Hero Start -->
-  <section class="bg-half-170" id="home">
-    <div class="home-center">
-      <div class="home-desc-center">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-7">
-              <div class="title-heading mt-4">
-                <h1 class="heading mb-3">Manage your server with <span class="text-primary">HaileyBot</span></h1>
-                <p class="para-desc text-muted">With nearly every feature you can think of, as well as dedicated staff and an active support team, HaileyBot is the perfect addition to any Discord server. <span class="text-primary">Scroll down to learn more . . .</span></p>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
-              <img src="images/haileybot.png" class="img-fluid mx-auto d-block" alt="">
-            </div>
-          </div>
-          <!--end row-->
-        </div>
-        <!--end container-->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="home-shape-bottom">
-              <img src="images/shapes/round-light.png" alt="" class="img-fluid mx-auto d-block">
-            </div>
-          </div>
-          <!--end row-->
-        </div> <!-- END CONTAINER -->
-      </div>
-      <!--end home desc center-->
-    </div>
-    <!--end home center-->
-  </section>
-  <!--end section-->
-  <!-- Hero End -->
-
-  <!-- Features Start -->
-  <section class="section bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-60">
-            <h4 class="main-title mb-4">Statistics</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">The below statistics are fetched live from a custom API, and are here to demonstrate the scale of this project.</p>
-          </div>
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-
-      <div class="row justify-content-center align-items-center">
-        <div class="col-lg-8 col-md-8">
-          <div class="row">
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-account icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-members"></span> Members</h4>
-                  <p class="text-muted para mb-0">the combined total of every user who shares a server with HaileyBot</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-server icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-servers"></span> Servers</h4>
-                  <p class="text-muted para mb-0">the total number of servers HaileyBot is in</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-code-greater-than icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-commands"></span> Commands</h4>
-                  <p class="text-muted para mb-0">the total number of commands executed over HaileyBot's lifetime</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-chart-line icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-ads"></span> Ads</h4>
-                  <p class="text-muted para mb-0">the total number of user ads registered to HaileyBot</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-message icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-global-channels"></span> Global Channels</h4>
-                  <p class="text-muted para mb-0">the total number of channels connected to the global chat</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-
-            <div class="col-md-6 col-12">
-              <div class="features p-1 pt-4 pb-4">
-                <i class="mdi mdi-gavel icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
-
-                <div class="content d-block overflow-hidden">
-                  <h4 class="title"><span id="stats-global-bans"></span> Global Bans</h4>
-                  <p class="text-muted para mb-0">the total number of users on the global ban list</p>
-                </div>
-              </div>
-            </div>
-            <!--end col-->
-          </div>
-          <!--end row-->
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-  </section>
-  <!--end section-->
-  <!-- Feature End -->
-
-  <!-- Showcase Start -->
-  <section class="section pt-0 bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <div class="section-title mb-60">
-            <h4 class="main-title mb-4">Features</h4>
-            <p class="text-muted para-desc mb-0 mx-auto">Add <span class="text-primary font-weight-bold">HaileyBot</span> to your server to get all the following features and more!</p>
-
-            <div class="row mt-4 justify-content-center">
-              <div class="col-lg-8 col-md-12 text-center">
-                <ul class="nav nav-pills nav-justified flex-column flex-sm-row" id="pills-tab" role="tablist">
-                  <li class="nav-item mt-4 pt-2">
-                    <a class="nav-link rounded active" id="pills-ads-tab" data-toggle="pill" href="#pills-ads" role="tab" aria-controls="pills-ads" aria-selected="false">
-                      <div class="text-center pt-1 pb-1">
-                        <h4 class="title font-weight-normal mb-0">Ads</h4>
-                      </div>
-                    </a>
-                    <!--end nav link-->
-                  </li>
-                  <!--end nav item-->
-
-                  <li class="nav-item mt-4 pt-2">
-                    <a class="nav-link rounded" id="pills-global-tab" data-toggle="pill" href="#pills-global" role="tab" aria-controls="pills-global" aria-selected="false">
-                      <div class="text-center pt-1 pb-1">
-                        <h4 class="title font-weight-normal mb-0">Global Chat</h4>
-                      </div>
-                    </a>
-                    <!--end nav link-->
-                  </li>
-                  <!--end nav item-->
-
-                  <li class="nav-item mt-4 pt-2">
-                    <a class="nav-link rounded" id="pills-mod-tab" data-toggle="pill" href="#pills-mod" role="tab" aria-controls="pills-mod" aria-selected="false">
-                      <div class="text-center pt-1 pb-1">
-                        <h4 class="title font-weight-normal mb-0">Moderation</h4>
-                      </div>
-                    </a>
-                    <!--end nav link-->
-                  </li>
-                  <!--end nav item-->
-                  <li class="nav-item mt-4 pt-2">
-                    <a class="nav-link rounded" id="pills-misc-tab" data-toggle="pill" href="#pills-misc" role="tab" aria-controls="pills-misc" aria-selected="false">
-                      <div class="text-center pt-1 pb-1">
-                        <h4 class="title font-weight-normal mb-0">Miscellaneous</h4>
-                      </div>
-                    </a>
-                    <!--end nav item-->
-                </ul>
-                <!--end nav pills-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-
-      <div class="row">
-        <div class="col-12">
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-ads" role="tabpanel" aria-labelledby="pills-ads-tab">
-              <div class="row align-items-center">
-                <div class="col-md-6 hide-mobile">
-                  <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
-                </div>
-                <!--end col-->
-
-                <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <div class="section-title">
-                    <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Spread your name</h4>
-                    <p class="text-muted">This feature is for helping server owners spread the word about their growing servers, and also for helping newer Discord users find a community they want to join.</p>
-                    <ul class="list-unstyled feature-list text-muted">
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Create your own customized advertisement</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Bump your ad every 2 hours</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>View all the ads in a channel on HaileyBot's server</li>
-                    </ul>
-                  </div>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </div>
-            <!--end teb pane-->
-
-            <div class="tab-pane fade" id="pills-global" role="tabpanel" aria-labelledby="pills-global-tab">
-              <div class="row align-items-center">
-                <div class="col-md-6 hide-mobile">
-                  <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
-                </div>
-                <!--end col-->
-
-                <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <div class="section-title">
-                    <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Connect with new people</h4>
-                    <p class="text-muted">This feature is for linking up different channels across different servers, so that you can meet new people and form new connections.</p>
-                    <ul class="list-unstyled feature-list text-muted">
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Link a channel to a multi-server global chat</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Connect your own channels to each other across servers</li>
-                    </ul>
-                  </div>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </div>
-            <!--end teb pane-->
-
-            <div class="tab-pane fade" id="pills-mod" role="tabpanel" aria-labelledby="pills-mod-tab">
-              <div class="row align-items-center">
-                <div class="col-md-6 hide-mobile">
-                  <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
-                </div>
-                <!--end col-->
-
-                <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <div class="section-title">
-                    <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Keep it clean</h4>
-                    <p class="text-muted">HaileyBot has an extensive list of moderation commands and functions for helping you keep your server the way you want it to be.</p>
-                    <ul class="list-unstyled feature-list text-muted">
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically grant new users a designated role</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Kick, ban, or warn members with a simple command</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically delete messages containing your set words/phrases</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Set up welcome/goodbye messages for when members join or leave</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Set up a live stat tracker for your server</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Automatically log all server activity to a designated channel</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Bulk delete large amounts of messages</li>
-                    </ul>
-                  </div>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </div>
-            <!--end teb pane-->
-
-            <div class="tab-pane fade" id="pills-misc" role="tabpanel" aria-labelledby="pills-misc-tab">
-              <div class="row align-items-center">
-                <div class="col-md-6 hide-mobile">
-                  <img src="images/pattern.png" class="img-fluid mx-auto d-block" alt="">
-                </div>
-                <!--end col-->
-
-                <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                  <div class="section-title">
-                    <h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Have fun</h4>
-                    <p class="text-muted">HaileyBot has many miscellaneous commands that can vastly improve the user experience.</p>
-                    <ul class="list-unstyled feature-list text-muted">
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Get the answer to any objective, fact-based question</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Search Google without needing to leave Discord</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Create a poll for users to vote on</li>
-                      <li><i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>View detailed information about the specified user, server, or emote</li>
-                    </ul>
-                  </div>
-                </div>
-                <!--end col-->
-              </div>
-              <!--end row-->
-            </div>
-            <!--end teb pane-->
-          </div>
-          <!--end tab content-->
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="home-shape-bottom">
-          <img src="images/shapes/round-white.png" alt="" class="img-fluid mx-auto d-block">
-        </div>
-      </div>
-      <!--end row-->
-    </div> <!-- END CONTAINER -->
-  </section>
-  <!--end section-->
-  <!-- Showcase End -->
-  <br><br><br>
-  <!-- Testi n Download cta start -->
-  <section class="section pt-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div id="customer-testi" class="owl-carousel owl-theme">
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/498511734366011403/632530428112142346/image0.jpg" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"The most versatile bot I've seen yet, packed with many features"</p>
-              <h6 class="text-primary">- folding.exe#0001</h6>
-            </div>
-
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/522040473376915456/630049275186905088/b42bbdc728f5d82622078b3b09d2f32c.png" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"I used HaileyBot to replace 4 other bots that all didnt work as well as HaileyBot! I have been looking for a bot to connect multiple servers privately for more than 6 months, HaileyBot does it with ease! The creator is active, and super helpful! Thank you HaileyBot! I look forward to removing future bots from my servers thanks to your future updates. Favorite Discord bot to date!"</p>
-              <h6 class="text-primary">- Phantom51180#0206</h6>
-            </div>
-
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/498511734366011403/630569355066736691/eba0f71aed382535b5587210cb6ad3aa.png" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"HaileyBot is one of my favorite bots! It comes with all the features and diversities from bumping to moderation. I went out of my way to add HaileyBot to my server and watched as it grew and looked more professional. Strongly recommend this bot. Deleted many bots from my server because HaileyBot offers the features of those bots. Quality over quantity, Always."</p>
-              <h6 class="text-primary">- Crooklyn's_Finest#9525</h6>
-            </div>
-
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/498511734366011403/630592271171059732/e57375f6452fda7721905bd7a98486a9.png" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"As an Admin for the chat and the main hub of the bot, I do love having the ability to chat with multiple users and servers without the need of randomly reconnecting to a new user/server. I can watch the chat all at once and help out the new users who are intrigued on how the chat, moderation logs and advertisements work. My score: 11/10 IGN. Would recommend to my family."</p>
-              <h6 class="text-primary">- Mr. Kristofferson#9911</h6>
-            </div>
-
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/498511734366011403/632471171912433665/a_8c7fc380e3ae83d91c7ba27b8697deac.png" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"The bot has a lot of positive functions, the most I like about this bot is communication between other servers, communication is smooth and secure."</p>
-              <h6 class="text-primary">- DeJzer#3622</h6>
-            </div>
-
-            <div class="customer-testi p-3 text-center">
-              <img src="https://cdn.discordapp.com/attachments/498511734366011403/632472094239752223/205e8ccc0d4c72a1dec97a4f0654d49d.png" height="80" class="rounded-pill mx-auto shadow" alt="">
-              <p class="text-muted mt-4">"Hell yeah, this bot is unique and the creator of it is one to look up too."</p>
-              <h6 class="text-primary">- destroyer101AF13#3379</h6>
-            </div>
-          </div>
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-    <br><br><br>
-
-    <center>
-
-      <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" id="review" class="pageclip-form" method="post" style="text-align: left; width: 100%; border: 1px solid #ecedf0; border-radius: 10px; background-color: #f8f9fc; padding: 1em">
-        <fieldset>
-          <legend style="text-align: center;">Leave a Review</legend>
-          <label for="tag">Discord Tag:</label><br>
-          <input name="tag" type="text" placeholder="Username#0000" required style="width: 100%;"><br><br>
-          <label for="review">Review:</label><br>
-          <textarea name="review" rows="4" required style="width: 100%;"></textarea><br>
-          <button type="submit" class="pageclip-form__submit" style="width: 100%;">
-            <span>Send</span>
-          </button>
-        </fieldset>
-      </form>
-
-    </center>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="home-shape-bottom">
-          <img src="images/shapes/round-dark.png" alt="" class="img-fluid mx-auto d-block">
-        </div>
-      </div>
-      <!--end row-->
-    </div> <!-- END CONTAINER -->
-  </section>
-  <!--end section-->
-  <!-- Testi n Download cta End -->
-
-  <!-- Footer Start -->
-  <footer class="footer footer-bar">
-    <div class="container text-center">
-      <div class="row align-items-center">
-        <div class="col-sm-6">
-          <div class="text-sm-left">
-            <a class="logo-footer" href="#">Hailey<span class="text-primary">Bot</span></a>
-            <p class="mb-0">© 2019 cheesits#0456</p>
-          </div>
-        </div>
-        <!--end col-->
-      </div>
-      <!--end row-->
-    </div>
-    <!--end container-->
-  </footer>
-  <!--end footer-->
-  <!-- Footer End -->
-
-  <!-- javascript -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrollspy.min.js"></script>
-  <!-- SLIDER -->
-  <script src="js/owl.carousel.min.js "></script>
-  <script src="js/owl.init.js "></script>
-  <!-- Main Js -->
-  <script src="js/app.js"></script>
-  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-</body>
-<script type="text/javascript">
-  var oReq = new XMLHttpRequest();
-  oReq.addEventListener("load", function() {
-    let r;
-    widget = JSON.parse(this.response);
-    widget.channels.forEach(c => {
-      document.getElementById(`stats-${c.name.toLowerCase().split(":")[0].replace(/ /g, "-")}`).innerHTML = c.name.split(":")[1];
-    })
-  });
-  oReq.open("GET", `https://cors-anywhere.herokuapp.com/https://discordapp.com/api/guilds/543000673189363725/widget.json`);
-  oReq.send();
-
-  let width = "30%";
-  if (window.mobilecheck()) width = "80%";
-  document.getElementById("review").style.width = width;
-
-  let show = Array.prototype.slice.call(document.getElementsByClassName("show-mobile"));
-  show.forEach(e => {
-    if (!window.mobilecheck()) e.style.display = "none";
-  })
-
-  let hide = Array.prototype.slice.call(document.getElementsByClassName("hide-mobile"));
-  hide.forEach(e => {
-    if (window.mobilecheck()) e.style.display = "none";
-  })
-</script>
 
 </html>

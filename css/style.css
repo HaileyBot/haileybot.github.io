@@ -32,6 +32,10 @@
   background-color: #2f55d4 !important;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .mention {
   background-color: #dbe3ff;
   border: 1px solid #c9d5ff;
@@ -1621,10 +1625,6 @@ p {
     top: 0;
     margin-left: 10px;
     margin-top: -1px;
-  }
-  #topnav .navigation-menu > li.last-elements .submenu {
-    left: auto;
-    right: 0;
   }
   #topnav .navigation-menu > li.last-elements .submenu > li.has-submenu .submenu {
     left: auto;
