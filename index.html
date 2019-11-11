@@ -572,6 +572,7 @@
     })
   });
   oReq.open("GET", `https://discordapp.com/api/guilds/543000673189363725/widget.json`);
+  oReq.setRequestHeader("origin", "");
   oReq.send();
 
   let width = "30%";
