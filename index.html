@@ -47,11 +47,11 @@
       notifications: true,
       indicator: true
     });
-    //crate.notify({
-    //  content: "Need help? Join the support server to receive assistance!",
-    //  timeout: 10000,
-    //  avatar: "images/cheesits456.gif"
-    //})
+    crate.notify({
+      content: "Need help? Join the support server to receive assistance!",
+      timeout: 10000,
+      avatar: "images/cheesits456.gif"
+    })
   </script>
 </head>
 
@@ -102,8 +102,11 @@
         <ul class="navigation-menu">
 
           <!-- Mobile Invites -->
-          <li class="show-mobile"><a href="https://invite.haileybot.com" target="_blank" class="text-primary">Add Bot</a></li>
-          <li class="show-mobile"><a href="https://server.haileybot.com" target="_blank" class="text-primary">Join Server</a>
+          <li class="show-mobile buy-button">
+            <span><a href="https://invite.haileybot.com" target="_blank" class="btn btn-block btn-primary">Add Bot</a></span>
+          </li>
+          <li class="show-mobile buy-button">
+            <span><a href="https://server.haileybot.com" target="_blank" class="btn btn-block btn-outline-primary">Join Server</a></span>
             <hr style="opacity: 25%; margin-top: 10px; margin-bottom: 10px">
           </li>
 
@@ -144,7 +147,7 @@
         <div class="container">
           <div class="row align-items-center">
 
-            <!-- Start Coloumn 1 -->
+            <!-- Coloumn 1 -->
             <div class="col-lg-6 col-md-7">
               <div class="title-heading mt-4">
                 <h1 class="heading mb-3">Manage your server with <span class="text-primary">HaileyBot</span></h1>
@@ -152,7 +155,7 @@
               </div>
             </div>
 
-            <!-- Start Column 2 -->
+            <!-- Column 2 -->
             <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
               <img src="images/haileybot.png" width="85%" class="img-fluid mx-auto d-block" alt="">
             </div>
@@ -160,7 +163,7 @@
           </div>
         </div>
 
-        <!-- Background Image -->
+        <!-- Background Design Image -->
         <div class="container-fluid">
           <div class="row">
             <div class="home-shape-bottom">
@@ -515,6 +518,8 @@
   <footer class="footer footer-bar">
     <div class="container text-center">
       <div class="row align-items-top">
+
+        <!-- Column 1 -->
         <div class="col-sm-3 text-sm-left">
           <h1 class="text-light mb-0">Hailey<span class="text-primary">Bot</span></h1>
           <div class="small">© 2019 cheesits#0456</div>
@@ -523,7 +528,11 @@
             <div><i class="mdi mdi-email"></i> <a href="mailto:contact@haileybot.com" target="_blank" class="text-foot">Email</a></div>
           </div>
         </div>
+
+        <!-- Column 2 -->
         <div class="col-sm-5"></div>
+
+        <!-- Column 3 -->
         <div class="col-sm-4 text-sm-left pr-4">
           <h5 class="title mb-0 text-center pb-1">Leave a Review</h5>
           <form action="https://send.pageclip.co/hwoikyF60ELMiAxZ2d4ZpqJOqACkJnlP/reviews" class="pageclip-form pr-2 pl-2" method="post">
@@ -534,11 +543,12 @@
             </div>
           </form>
         </div>
+
       </div>
     </div>
   </footer>
 
-  <!-- javascript -->
+  <!-- JavaScript -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
