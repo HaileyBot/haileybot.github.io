@@ -4,7 +4,7 @@
 [uptime]: https://botlist.space/bot/423637161632464906/badge?property=uptime.2&style=flat-square&color=brightgreen
 [servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat-square&color=informational
 [version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet&style=flat-square
-[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io&style=flat-square
+[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square
 
 ---
 # Overview
