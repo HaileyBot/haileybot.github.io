@@ -5,6 +5,7 @@
 [servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat&color=informational
 [version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet
 [license]: https://img.shields.io/github/license/haileybot/haileybot.github.io
+
 ---
 # Overview
 HaileyBot aims to be an incredibly versatile bot; our goal is to have every feature you could ever think of, as well as some you would never even imagine. The overall vision of HaileyBot is to provide the user with a quality product. Unlike many of the "big name" Discord bots, HaileyBot will _never_ integrate any "pay to unlock" commands, or anything else that requires monetary compensation in exchange for basic functionality. HaileyBot was built from the ground up on a foundation based on user satisfaction. The user experience is our top priority, because without the userbase, this bot would not exist.
