@@ -1,7 +1,7 @@
 ![Status][status] ![Uptime][uptime] ![Servers][servers] ![Version][version] ![License][license]
 
 [status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat-square&color=brightgreen
-[uptime]: https://img.shields.io/uptimerobot/ratio/m784000657-450c080aaa3f0532f848717b?style=flat-square
+[uptime]: https://img.shields.io/uptimerobot/ratio/m784065506-f9e54410b7e5bb102ad08c84?style=flat-square
 [servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat-square&color=informational
 [version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet&style=flat-square
 [license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square
@@ -13,7 +13,7 @@ HaileyBot aims to be an incredibly versatile bot; our goal is to have every feat
 ---
 # Features
 ## Advertising
-HaileyBot's advertising feature allows server admins to create an advertisement for their server using `$-register`, and bump it every 2 hours with `$-bump`. Ad bumps are sent to a designated channel on the bot's support server, where they can be seen by over 650 users. The channel also serves as a way to help out users who are new to Discord, or even older users who want to find a new community to join.
+HaileyBot's advertising feature allows server admins to create an advertisement for their server using `$-register`, and bump it every 2 hours with `$-bump`. Ad bumps are sent to a designated channel on the bot's support server, where they can be seen by over 700 users. The channel also serves as a way to help out users who are new to Discord, or even older users who want to find a new community to join.
 ## Global Chat
 The global chat feature of this bot can link a channel from your server to the bot's global chat simply by typing `$-link`. Any messages sent to a connected channel are forwarded through the bot to all the other connected channels. This has the potential to open up your server to a brand new world of possibilities when it comes to socializing and building an active community. The Global Chat is governed by 7 simple, incredibly reasonable rules, and we have an active staff team to enforce them when needed. This makes Global Chat a fantastic method to meet and converse with new people who you otherwise never would've met.
 ## Miscellaneous
