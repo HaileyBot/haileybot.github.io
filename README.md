@@ -1,10 +1,10 @@
-![Status][status] ![Uptime][uptime] ![Servers][servers] ![Version][version] ![License][license]
+![Status][status] ![Servers][servers] ![Uptime][uptime] ![Version][version] ![License][license]
 
-[status]: https://botlist.space/bot/423637161632464906/badge?property=status&style=flat-square&color=brightgreen
-[uptime]: https://img.shields.io/uptimerobot/ratio/m784065506-f9e54410b7e5bb102ad08c84?style=flat-square
-[servers]: https://botlist.space/bot/423637161632464906/badge?property=servers&style=flat-square&color=informational
-[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet&style=flat-square
-[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square
+[status]: https://top.gg/api/widget/status/423637161632464906.svg?noavatar=true
+[servers]: https://top.gg/api/widget/servers/423637161632464906.svg?noavatar=true
+[uptime]: https://img.shields.io/uptimerobot/ratio/m784065506-f9e54410b7e5bb102ad08c84?labelColor=35383d&label=%E2%80%8B%20%E2%80%8B%20uptime%20%E2%80%8B%20%E2%80%8B%20%E2%80%8B
+[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=blueviolet&labelColor=35383d&label=%E2%80%8B%20%E2%80%8B%20version%20%E2%80%8B%20%E2%80%8B%20%E2%80%8B
+[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?labelColor=35383d&label=%E2%80%8B%20%E2%80%8B%20license%20%E2%80%8B%20%E2%80%8B%20%E2%80%8B
 
 ---
 # Overview
