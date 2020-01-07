@@ -1,10 +1,8 @@
-![Status][status] ![Uptime][uptime] ![Servers][servers] ![Version][version] ![License][license]
-
-[status]: https://img.shields.io/badge/dynamic/json?color=brightgreen&label=status&query=status&url=https%3A%2F%2Fdiscord.bots.gg%2Fapi%2Fv1%2Fbots%2F423637161632464906&style=flat-square
-[uptime]: https://img.shields.io/uptimerobot/ratio/m784065506-f9e54410b7e5bb102ad08c84?style=flat-square&color=0a0
-[servers]: https://img.shields.io/badge/dynamic/json?label=servers&query=guildCount&url=https%3A%2F%2Fdiscord.bots.gg%2Fapi%2Fv1%2Fbots%2F423637161632464906&style=flat-square&color=2c75ff
-[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=5F4DEF&style=flat-square
-[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square&color=blueviolet
+<img src="http://www.haileybot.com/images/haileybot.png" align="left" height="140px"><h1>HaileyBot</h1>
+  
+![Status][status] ![Uptime][uptime]  
+![Servers][servers] ![Version][version] ![License][license]  
+<br>
 
 ---
 # Overview
@@ -26,3 +24,9 @@ An expansion to the `$-link` command came in the form of `$-link private`. Simil
 HaileyBot has many commands for setting up automation and organization on your server. These commands enable you to set up automatic role assignment for new members, 'welcome' and 'goodbye' messages for when users join or leave your server, and live server stat trackers that update automatically as the statistics change.
 ### Utility
 HaileyBot's `Utility` category is a small collection of commands that are incredibly useful to have during a conversation. With these commands, you can get the answer to any objective questions (local weather, currency conversion, word definitions, etc), look up detailed information about pretty much anything, or even use google directly within Discord. There's also commands for creating a poll for users to vote on, or recalling an old message to provide context in a conversation.
+
+[status]: https://img.shields.io/badge/dynamic/json?color=brightgreen&label=status&query=status&url=https%3A%2F%2Fdiscord.bots.gg%2Fapi%2Fv1%2Fbots%2F423637161632464906&style=flat-square
+[uptime]: https://img.shields.io/uptimerobot/ratio/m784065506-f9e54410b7e5bb102ad08c84?style=flat-square&color=0a0
+[servers]: https://img.shields.io/badge/dynamic/json?label=servers&query=guildCount&url=https%3A%2F%2Fdiscord.bots.gg%2Fapi%2Fv1%2Fbots%2F423637161632464906&style=flat-square&color=2c75ff
+[version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=5F4DEF&style=flat-square
+[license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square&color=blueviolet
