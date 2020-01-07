@@ -1,4 +1,4 @@
-<img src="http://www.haileybot.com/images/haileybot.png" align="left" height="140px"><h1>HaileyBot</h1>
+<img src="http://www.haileybot.com/images/haileybot.png" align="left" height="150px"><h1>HaileyBot</h1>
   
 ![Status][status] ![Uptime][uptime]  
 ![Servers][servers] ![Version][version] ![License][license]  
