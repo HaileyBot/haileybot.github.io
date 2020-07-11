@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/pageclip.css" media="screen">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="js/lazysizes.min.js" async></script>
   <script type="text/javascript" src="js/mobileCheck.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
     const crate = new Crate({
@@ -51,7 +52,6 @@
       avatar: "images/cheesits456.gif"
     })
   </script>
-  <script data-ad-client="ca-pub-8883071649869896" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -584,11 +584,6 @@
   oReq.open("GET", `https://discordapp.com/api/guilds/543000673189363725/widget.json`);
   oReq.setRequestHeader("origin", "");
   oReq.send();
-
-  let width = "30%";
-  if (window.mobilecheck()) width = "80%";
-  document.getElementById("review").style.width = width;
 </script>
-  <script src="lazysizes.min.js" async=""></script>
 
 </html>
