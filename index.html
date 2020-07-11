@@ -149,7 +149,6 @@
               <video autoplay loop muted playsinline width="85%" class="img-fluid mx-auto d-block">  
                 <source src="images/haileybot.webm" type="video/webm">
               </video>
-              <!-- <img data-src="images/haileybot.gif" width="85%" class="lazyload img-fluid mx-auto d-block" alt=""> -->
             </div>
 
           </div>
@@ -545,25 +544,6 @@
   <!-- JavaScript -->
   <script src="js/lazysizes.min.js" async></script>
   <script type="text/javascript" src="js/mobileCheck.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    const crate = new Crate({
-      server: "413486862175436812",
-      channel: "431546109911891978",
-      shard: "https://e.widgetbot.io",
-      css: `
-        .root .embed {
-          width: ${window.mobilecheck() ? "100%" : "50%"};
-        }
-      `,
-      notifications: true,
-      indicator: true
-    });
-    crate.notify({
-      content: "Need help? Join the support server to receive assistance!",
-      timeout: 10000,
-      avatar: "images/cheesits456-42.gif"
-    })
-  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
@@ -588,5 +568,23 @@
   oReq.setRequestHeader("origin", "");
   oReq.send();
 </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    const crate = new Crate({
+      server: "413486862175436812",
+      channel: "431546109911891978",
+      shard: "https://e.widgetbot.io",
+      css: `
+        .root .embed {
+          width: ${window.mobilecheck() ? "100%" : "50%"};
+        }
+      `,
+      notifications: true,
+      indicator: true
+    });
+    crate.notify({
+      content: "Need help? Join the support server to receive assistance!",
+      timeout: 10000,
+      avatar: "images/cheesits456-42.gif"
+    })
+  </script>
 </html>
