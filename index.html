@@ -31,27 +31,6 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/pageclip.css" media="screen">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script src="js/lazysizes.min.js" async></script>
-  <script type="text/javascript" src="js/mobileCheck.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    const crate = new Crate({
-      server: "413486862175436812",
-      channel: "431546109911891978",
-      shard: "https://e.widgetbot.io",
-      css: `
-        .root .embed {
-          width: ${window.mobilecheck() ? "100%" : "75%"};
-        }
-      `,
-      notifications: true,
-      indicator: true
-    });
-    crate.notify({
-      content: "Need help? Join the support server to receive assistance!",
-      timeout: 10000,
-      avatar: "images/cheesits456.gif"
-    })
-  </script>
 </head>
 
 <body>
@@ -561,6 +540,27 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="js/lazysizes.min.js" async></script>
+  <script type="text/javascript" src="js/mobileCheck.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    const crate = new Crate({
+      server: "413486862175436812",
+      channel: "431546109911891978",
+      shard: "https://e.widgetbot.io",
+      css: `
+        .root .embed {
+          width: ${window.mobilecheck() ? "100%" : "50%"};
+        }
+      `,
+      notifications: true,
+      indicator: true
+    });
+    crate.notify({
+      content: "Need help? Join the support server to receive assistance!",
+      timeout: 10000,
+      avatar: "images/cheesits456.gif"
+    })
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
