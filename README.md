@@ -1,6 +1,6 @@
 <img src="https://www.haileybot.com/images/haileybot.png" align="left" height="160px"><h1>HaileyBot</h1>
   
-![Status][status] ![Uptime][uptime]  
+![Status][status] ![Uptime][uptime] ![Hits][hits]  
 ![Servers][servers] ![Version][version] ![License][license]  
 <br>
 
@@ -30,3 +30,4 @@ HaileyBot's `Utility` category is a small collection of commands that are incred
 [servers]: https://img.shields.io/badge/dynamic/json?label=servers&query=guildCount&url=https%3A%2F%2Fdiscord.bots.gg%2Fapi%2Fv1%2Fbots%2F423637161632464906&style=flat-square&color=2c75ff
 [version]: https://img.shields.io/github/manifest-json/v/haileybot/haileybot.github.io?color=5F4DEF&style=flat-square
 [license]: https://img.shields.io/github/license/haileybot/haileybot.github.io?style=flat-square&color=blueviolet
+[hits]: http://hits.dwyl.com/haileybot/haileybotgithubio.svg
