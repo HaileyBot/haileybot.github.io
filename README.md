@@ -1,4 +1,3 @@
-
 <img src="https://www.haileybot.com/images/haileybot.png" align="left" height="160px"><h1>HaileyBot</h1>
   
 ![Status][status] ![Uptime][uptime] ![Hits][hits]  
