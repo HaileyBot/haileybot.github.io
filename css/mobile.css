@@ -1,0 +1,11 @@
+@media (pointer:coarse) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (pointer:fine) {
+    .show-mobile {
+        display: none;
+    }
+}
