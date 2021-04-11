@@ -4,8 +4,9 @@
     }
 }
 
-@media (pointer:fine) {
-    .show-mobile {
+
+.show-mobile {
+    @media (pointer:fine) {
         display: none;
     }
 }
