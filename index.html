@@ -18,14 +18,14 @@
 		<meta property="og:type" content="object" />
 		<meta property="og:image" content="https://www.haileybot.com/images/haileybot.gif" />
 		<meta name="mobile-web-app-capable" content="yes" />
-		<link rel="icon" sizes="192x192" href="images/haileybot.png" />
+		<link rel="icon" sizes="192x192" href="images/haileybot.webp" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta name="apple-mobile-web-app-title" content="HaileyBot" />
-		<link rel="apple-touch-icon-precomposed" href="images/haileybot.png" />
-		<meta name="msapplication-TileImage" content="https://www.haileybot.com/images/haileybot.png" />
+		<link rel="apple-touch-icon-precomposed" href="images/haileybot.webp" />
+		<meta name="msapplication-TileImage" content="https://www.haileybot.com/images/haileybot.webp" />
 		<meta name="theme-color" content="#2c75ff" />
-		<link rel="shortcut icon" href="images/haileybot.png" />
+		<link rel="shortcut icon" href="images/haileybot.webp" />
 		<meta name="abuseipdb-verification" content="VtHtNeUc" />
 
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -33,6 +33,7 @@
 		<link rel="stylesheet" href="css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="css/owl.theme.default.min.css" />
 		<link rel="stylesheet" href="css/pageclip.css" media="screen" />
+		<link rel="stylesheet" href="css/mobile.css">
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 
@@ -161,7 +162,8 @@
 							<!-- Column 2 -->
 							<div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
 								<video autoplay loop muted playsinline width="85%" class="img-fluid mx-auto d-block">
-									<source src="images/haileybot.webm" type="video/webm" />
+									<source src="images/haileybot-av1.webm" type="video/webm" />
+									<source src="images/haileybot-vp9.webm" type="video/webm" />
 								</video>
 							</div>
 						</div>
@@ -171,7 +173,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="home-shape-bottom">
-								<img data-src="images/shapes/round-light.png" alt="" class="lazyload img-fluid mx-auto d-block" />
+								<img src="images/shapes/round-light.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
 							</div>
 						</div>
 					</div>
@@ -366,7 +368,7 @@
 							<div class="tab-pane fade show active" id="pills-ads" role="tabpanel" aria-labelledby="pills-ads-tab">
 								<div class="row align-items-center">
 									<div class="col-md-6 hide-mobile">
-										<img data-src="images/pattern.png" class="lazyload img-fluid mx-auto d-block" alt="" />
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
 									</div>
 
 									<!-- Pill 1 Content -->
@@ -396,7 +398,7 @@
 							<div class="tab-pane fade" id="pills-global" role="tabpanel" aria-labelledby="pills-global-tab">
 								<div class="row align-items-center">
 									<div class="col-md-6 hide-mobile">
-										<img data-src="images/pattern.png" class="lazyload img-fluid mx-auto d-block" alt="" />
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
 									</div>
 
 									<!-- Pill 2 Content -->
@@ -426,7 +428,7 @@
 							<div class="tab-pane fade" id="pills-mod" role="tabpanel" aria-labelledby="pills-mod-tab">
 								<div class="row align-items-center">
 									<div class="col-md-6 hide-mobile">
-										<img data-src="images/pattern.png" class="lazyload img-fluid mx-auto d-block" alt="" />
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
 									</div>
 
 									<!-- Pill 3 Content -->
@@ -475,7 +477,7 @@
 							<div class="tab-pane fade" id="pills-misc" role="tabpanel" aria-labelledby="pills-misc-tab">
 								<div class="row align-items-center">
 									<div class="col-md-6 hide-mobile">
-										<img data-src="images/pattern.png" class="lazyload img-fluid mx-auto d-block" alt="" />
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
 									</div>
 
 									<!-- Pill 4 -->
@@ -511,7 +513,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="home-shape-bottom">
-						<img data-src="images/shapes/round-white.png" alt="" class="lazyload img-fluid mx-auto d-block" />
+						<img src="images/shapes/round-white.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
 					</div>
 				</div>
 			</div>
@@ -697,7 +699,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="home-shape-bottom">
-						<img data-src="images/shapes/round-dark.png" alt="" class="lazyload img-fluid mx-auto d-block" />
+						<img src="images/shapes/round-dark.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
 					</div>
 				</div>
 			</div>
@@ -730,12 +732,10 @@
 		</footer>
 
 		<!-- JavaScript -->
-		<script src="js/lazysizes.min.js" async></script>
 		<script type="text/javascript" src="js/mobileCheck.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
-		<script src="js/scrollspy.min.js"></script>
 		<script src="js/owl.carousel.min.js "></script>
 		<script src="js/owl.init.js "></script>
 		<script src="js/app.js"></script>
