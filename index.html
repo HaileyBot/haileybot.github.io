@@ -156,6 +156,8 @@
 										With nearly every feature you can think of, as well as dedicated staff and an active support team, HaileyBot is the
 										perfect addition to any Discord server. <span class="text-primary">Scroll down to learn more . . .</span>
 									</p>
+									<!-- Warns the user that they should enable JS for a better experience. See the noscript tag -->
+									<p id="nojs-p"><b id="nojs-warning"></b></p>
 								</div>
 							</div>
 
@@ -771,4 +773,26 @@
 		  avatar: "images/cheesits456-42.gif"
 		})
 	</script>
+	<!-- Hide loading animation & show nojs warning if the user has js disabled -->
+	<noscript>
+		<style>
+			#preloader {
+				display: none;
+			}
+			
+			#nojs-warning {
+				content: "You have JavaScript disabled. Please enable JavaScript for a better experience.";
+			}
+			
+			#nojs-p {
+				display: block !important;
+			}
+		</style>
+	</noscript>
+	<!-- Completely hide nojs warning if JS is enabled -->
+	<style>
+		#nojs-p {
+			display: none;
+		}
+	</style>
 </html>
